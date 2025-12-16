@@ -1,0 +1,20 @@
+services:
+  flask-ml:
+    container_name: psid-ml-container
+    build: .
+    ports:
+      - "7000:7000"
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - ../:/psid
+    networks:
+      - net
+    environment:
+      - FLASK_ENV=development
+      - FLASK_RUN_HOST=0.0.0.0
+
+
+networks:
+  net:
+    driver: bridge
