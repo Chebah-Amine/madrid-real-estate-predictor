@@ -1,0 +1,20 @@
+[mapdiv] {
+    position: absolute;
+    &::after {
+        content: ""; width: 100%; height: 100%;
+        top: 0; left: 0;
+        pointer-events: none;
+        position: absolute;
+        box-shadow: inset 0 0 150px 60px #1d1d2445;
+        z-index: 899;
+    }
+}
+[item]{
+    transition-duration: .3s;
+    &.selected {
+        color: #2a312b;
+        background: #80b988;
+        box-shadow: 0 0 20PX rgb(50 94 56 / 20%) !important;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.19);
+    }
+}

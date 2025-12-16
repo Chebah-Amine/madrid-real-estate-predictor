@@ -1,0 +1,30 @@
+
+<div class="mx-auto w-9/12">
+
+    <app-navbar></app-navbar>
+  
+    <div separator></div>
+    
+
+    <!-- STEP 1 -->
+    
+    <div *ngIf="step === 1">
+        <app-prediction-filters [variables]="variables" (onSelect)="onSelect($event)"></app-prediction-filters>
+    </div>
+    
+
+    <!-- STEP 2 -->
+
+    <div *ngIf="step === 2">
+        <app-prediction-form [variables]="selectedFilters" (onSubmit)="onSubmit($event)" (onPrevious)="onPrevious()"></app-prediction-form>
+    </div>
+
+
+    <!-- STEP 3 -->
+
+    <div *ngIf="step === 3">
+        <app-prediction-results [result]="apiResults" (onRestart)="onRestart()"></app-prediction-results>
+    </div>
+
+
+</div> 

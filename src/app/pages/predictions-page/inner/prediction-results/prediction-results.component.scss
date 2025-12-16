@@ -1,0 +1,17 @@
+[selection] {
+    position: relative;
+    &::after {
+        --d: 12px;
+        content: "";
+        position: absolute;
+        top: var(--d);
+        left: var(--d);
+        width: 5px;
+        height: calc(100% - 2* var(--d));
+        border-radius: 200px;
+    }
+}
+[selection][s1]:after { background-color: #deece1;
+}
+[selection][s2]:after { background-color: #e4e9ee;
+}

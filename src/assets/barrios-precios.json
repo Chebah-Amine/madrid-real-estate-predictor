@@ -1,0 +1,848 @@
+[
+    {
+        "latitude": 40.3850604,
+        "longitude": -3.7031823,
+        "mean_price": 184736.4655172414,
+        "quartier": "Moscardó, Madrid"
+    },
+    {
+        "latitude": 40.3810675,
+        "longitude": -3.7006396,
+        "mean_price": 202401.73282442748,
+        "quartier": "Almendrales, Madrid"
+    },
+    {
+        "latitude":40.4052863,
+        "longitude":-3.6072004,
+        "mean_price": 220564.08450704225,
+        "quartier": "Casco Histórico de Vicálvaro, Madrid"
+    },
+    {
+        "latitude": 40.441239,
+        "longitude": -3.6687377,
+        "mean_price": 458914.9116607774,
+        "quartier": "Prosperidad, Madrid"
+    },
+    {
+        "latitude": 40.40487,
+        "longitude": -3.5603673,
+        "mean_price": 296749.9678714859,
+        "quartier": "El Cañaveral - Los Berrocales, Madrid"
+    },
+    {
+        "latitude": 40.4047112,
+        "longitude": -3.6362826,
+        "mean_price": 274520.61904761905,
+        "quartier": "Marroquina, Madrid"
+    },
+    {
+        "latitude": 40.4592017,
+        "longitude": -3.6603386,
+        "mean_price": 606742.1875,
+        "quartier": "Colina, Madrid"
+    },
+    {
+        "latitude": 40.3857939,
+        "longitude": -3.6071335,
+        "mean_price": 227994.04255319148,
+        "quartier": "Santa Eugenia, Madrid"
+    },
+    {
+        "latitude": 40.3446298,
+        "longitude": -3.7151909,
+        "mean_price": 163501.68599033816,
+        "quartier": "San Andrés, Madrid"
+    },
+    {
+        "latitude": 40.3655263,
+        "longitude": -3.7139301,
+        "mean_price": 174047.95918367346,
+        "quartier": "Zofío, Madrid"
+    },
+    {
+        "latitude": 40.4029414,
+        "longitude": -3.6603054,
+        "mean_price": 160156.64077669903,
+        "quartier": "Numancia, Madrid"
+    },
+    {
+        "latitude": 40.4525986,
+        "longitude": -3.6994965,
+        "mean_price": 516065.97095435683,
+        "quartier": "Cuatro Caminos, Madrid"
+    },
+    {
+        "latitude": 40.4169705,
+        "longitude": -3.6763451,
+        "mean_price": 740384.4262295082,
+        "quartier": "Ibiza, Madrid"
+    },
+    {
+        "latitude": 40.4823328,
+        "longitude": -3.6743713,
+        "mean_price": 719742.7272727273,
+        "quartier": "Castilla, Madrid"
+    },
+    {
+        "latitude": 40.3745833,
+        "longitude": -3.6600647,
+        "mean_price": 135281.58252427186,
+        "quartier": "Entrevías, Madrid"
+    },
+    {
+        "latitude": 40.4661252,
+        "longitude": -3.7060344,
+        "mean_price": 267643.51243781095,
+        "quartier": "Valdeacederas, Madrid"
+    },
+    {
+        "latitude": 40.3756435,
+        "longitude": -3.7814069,
+        "mean_price": 171126.0394736842,
+        "quartier": "Águilas, Madrid"
+    },
+    {
+        "latitude": 40.4426759,
+        "longitude": -3.7141181,
+        "mean_price": 803804.081632653,
+        "quartier": "Vallehermoso, Madrid"
+    },
+    {
+        "latitude": 40.3711037,
+        "longitude": -3.6901759,
+        "mean_price": 188942.0775862069,
+        "quartier": "Usera, Madrid"
+    },
+    {
+        "latitude": 40.4110941,
+        "longitude": -3.6737205,
+        "mean_price": 1295440.7471264368,
+        "quartier": "Retiro, Madrid"
+    },
+    {
+        "latitude": 40.3952943,
+        "longitude": -3.7076526,
+        "mean_price": 217045.5357142857,
+        "quartier": "Comillas, Madrid"
+    },
+    {
+        "latitude": 40.4029966,
+        "longitude": -3.6933908,
+        "mean_price": 320217.6024096386,
+        "quartier": "Palos de Moguer, Madrid"
+    },
+    {
+        "latitude": 40.3628498,
+        "longitude": -3.7476603,
+        "mean_price": 293019.7368421053,
+        "quartier": "Pau de Carabanchel, Madrid"
+    },
+    {
+        "latitude": 40.4062346,
+        "longitude": -3.6055142,
+        "mean_price": 147076.83783783784,
+        "quartier": "Ambroz, Madrid"
+    },
+    {
+        "latitude": 40.4726379,
+        "longitude": -3.713118,
+        "mean_price": 246006.04347826086,
+        "quartier": "Pilar, Madrid"
+    },
+    {
+        "latitude":40.5009512,
+        "longitude":-3.6946274,
+        "mean_price": 357456.23595505615,
+        "quartier": "Tres Olivos - Valverde, Madrid"
+    },
+    {
+        "latitude": 40.410399,
+        "longitude": -3.7016245,
+        "mean_price": 391247.84294871794,
+        "quartier": "Lavapiés-Embajadores, Madrid"
+    },
+    {
+        "latitude": 40.4069996,
+        "longitude": -3.7113736,
+        "mean_price": 696046.9117647059,
+        "quartier": "Sol, Madrid"
+    },
+    {
+        "latitude": 40.4069615,
+        "longitude": -3.650958,
+        "mean_price": 178622.10280373832,
+        "quartier": "Vista Alegre, Madrid"
+    },
+    {
+        "latitude": 40.3545596,
+        "longitude": -3.6988111,
+        "mean_price": 152530.02222222224,
+        "quartier": "Los Ángeles, Madrid"
+    },
+    {
+        "latitude": 40.4368813,
+        "longitude": -3.3625439,
+        "mean_price": 1264854.5454545454,
+        "quartier": "Jerónimos, Madrid"
+    },
+    {
+        "latitude": 40.4866672,
+        "longitude": -3.6720296,
+        "mean_price": 367853.3333333333,
+        "quartier": "Virgen del Cortijo - Manoteras, Madrid"
+    },
+    {
+        "latitude": 40.44526385,
+        "longitude": -3.4738321297900896,
+        "mean_price": 294304.7619047619,
+        "quartier": "Valdebernardo - Valderribas, Madrid"
+    },
+    {
+        "latitude":40.424977,
+        "longitude":-3.6636998,
+        "mean_price": 425039.84,
+        "quartier": "Fuente del Berro, Madrid"
+    },
+    {
+        "latitude":40.436356,
+        "longitude":-3.6680189,
+        "mean_price": 494982.5251798561,
+        "quartier": "Guindalera, Madrid"
+    },
+    {
+        "latitude": 40.4645168,
+        "longitude": -3.7974372,
+        "mean_price": 1191200.6666666667,
+        "quartier": "Valdemarín, Madrid"
+    },
+    {
+        "latitude": 40.4045444,
+        "longitude": -3.7031958,
+        "mean_price": 371724.83516483515,
+        "quartier": "Acacias, Madrid"
+    },
+    {
+        "latitude": 40.4007842,
+        "longitude": -3.645123,
+        "mean_price": 174388.88888888888,
+        "quartier": "Fontarrón, Madrid"
+    },
+    {
+        "latitude": 40.4290339,
+        "longitude": -3.7093449,
+        "mean_price": 533675.796969697,
+        "quartier": "Malasaña-Universidad, Madrid"
+    },
+    {
+        "latitude": 40.3669961,
+        "longitude": -3.6542926,
+        "mean_price": 165397.43307086613,
+        "quartier": "Los Rosales, Madrid"
+    },
+    {
+        "latitude": 40.4531728,
+        "longitude": -3.7085473,
+        "mean_price": 257093.59903381643,
+        "quartier": "Bellas Vistas, Madrid"
+    },
+    {
+        "latitude": 40.3860781,
+        "longitude": -3.6857698,
+        "mean_price": 498645.56962025317,
+        "quartier": "Legazpi, Madrid"
+    },
+    {
+        "latitude": 40.4616834,
+        "longitude": -3.6397578,
+        "mean_price": 384289.5,
+        "quartier": "Canillas, Madrid"
+    },
+    {
+        "latitude": 40.3759225,
+        "longitude": -3.7390858,
+        "mean_price": 173538.89393939395,
+        "quartier": "Puerta Bonita, Madrid"
+    },
+    {
+        "latitude": 40.3938768,
+        "longitude": -3.694451,
+        "mean_price": 302520.89552238805,
+        "quartier": "Chopera, Madrid"
+    },
+    {
+        "latitude": 40.3960721,
+        "longitude": -3.6708628,
+        "mean_price": 138513.9076923077,
+        "quartier": "San Diego, Madrid"
+    },
+    {
+        "latitude": 40.4396312,
+        "longitude": -3.3632455,
+        "mean_price": 1637080.3610108304,
+        "quartier": "Chamartín, Madrid"
+    },
+    {
+        "latitude": 40.3974886,
+        "longitude": -3.7161854,
+        "mean_price": 200031.34868421053,
+        "quartier": "Opañel, Madrid"
+    },
+    {
+        "latitude": 40.3262831,
+        "longitude": -3.8561527,
+        "mean_price": 612813.6563876652,
+        "quartier": "Trafalgar, Madrid"
+    },
+    {
+        "latitude": 40.4580463,
+        "longitude": -3.6602556,
+        "mean_price": 508439.7633587786,
+        "quartier": "Ciudad Lineal, Madrid"
+    },
+    {
+        "latitude": 40.4039759,
+        "longitude": -3.694602,
+        "mean_price": 356085.1875,
+        "quartier": "Arganzuela, Madrid"
+    },
+    {
+        "latitude": 40.480295,
+        "longitude": -3.6689981,
+        "mean_price": 652895.8265306122,
+        "quartier": "Costillares, Madrid"
+    },
+    {
+        "latitude": 40.4384674,
+        "longitude": -3.6876354,
+        "mean_price": 1368846.1337579617,
+        "quartier": "El Viso, Madrid"
+    },
+    {
+        "latitude": 40.3766738,
+        "longitude": -3.6007727,
+        "mean_price": 415799.4713375796,
+        "quartier": "Pacífico, Madrid"
+    },
+    {
+        "latitude": 40.4686117,
+        "longitude": -3.8080036,
+        "mean_price": 1776645.4545454546,
+        "quartier": "El Plantío, Madrid"
+    },
+    {
+        "latitude": 40.4520638,
+        "longitude": -3.608974,
+        "mean_price": 775968.253968254,
+        "quartier": "Palomas, Madrid"
+    },
+    {
+        "latitude": 40.4646391,
+        "longitude": -3.6913216,
+        "mean_price": 574420.4569536424,
+        "quartier": "Cuzco-Castillejos, Madrid"
+    },
+    {
+        "latitude": 40.4047609,
+        "longitude": -3.7323334,
+        "mean_price": 236230.15151515152,
+        "quartier": "Los Cármenes, Madrid"
+    },
+    {
+        "latitude": 40.4918869,
+        "longitude": -3.7133758,
+        "mean_price": 1038255.7894736842,
+        "quartier": "Mirasierra, Madrid"
+    },
+    {
+        "latitude": 40.3980074,
+        "longitude": -3.7673938,
+        "mean_price": 208706.14,
+        "quartier": "Campamento, Madrid"
+    },
+    {
+        "latitude": 40.4254209,
+        "longitude": -3.6801804,
+        "mean_price": 594685.5113636364,
+        "quartier": "Ciudad Jardín, Madrid"
+    },
+    {
+        "latitude": 40.4164031,
+        "longitude": -3.7113796,
+        "mean_price": 582055.4011627907,
+        "quartier": "Palacio, Madrid"
+    },
+    {
+        "latitude": 40.3925693,
+        "longitude": -3.6949698,
+        "mean_price": 372179.60576923075,
+        "quartier": "Delicias, Madrid"
+    },
+    {
+        "latitude": 40.5106898,
+        "longitude": -3.667701,
+        "mean_price": 996964.0616246499,
+        "quartier": "Fuencarral, Madrid"
+    },
+    {
+        "latitude":40.4356576,
+        "longitude":-3.6471022,
+        "mean_price": 244737.33620689655,
+        "quartier": "Quintana, Madrid"
+    },
+    {
+        "latitude":40.4018377,
+        "longitude":-3.5950537,
+        "mean_price": 204852.6851851852,
+        "quartier": "Vicálvaro, Madrid"
+    },
+    {
+        "latitude": 40.4627092,
+        "longitude": -3.7116683,
+        "mean_price": 290100.6666666667,
+        "quartier": "Valdezarza, Madrid"
+    },
+    {
+        "latitude": 40.4652707,
+        "longitude": -3.6951869,
+        "mean_price": 374312.32558139536,
+        "quartier": "Ventilla-Almenara, Madrid"
+    },
+    {
+        "latitude": 40.4241347,
+        "longitude": -3.6540575,
+        "mean_price": 203425.21777777778,
+        "quartier": "Ventas, Madrid"
+    },
+    {
+        "latitude": 40.434483,
+        "longitude": -3.7155482,
+        "mean_price": 663605.3216080402,
+        "quartier": "Gaztambide, Madrid"
+    },
+    {
+        "latitude": 40.4108865,
+        "longitude": -3.7204569,
+        "mean_price": 406130.39240506326,
+        "quartier": "Imperial, Madrid"
+    },
+    {
+        "latitude": 40.4938698,
+        "longitude": -3.6235973,
+        "mean_price": 585381.4159292035,
+        "quartier": "Valdebebas - Valdefuentes, Madrid"
+    },
+    {
+        "latitude": 40.4456833,
+        "longitude": -3.6951174,
+        "mean_price": 666994.735,
+        "quartier": "Nuevos Ministerios-Ríos Rosas, Madrid"
+    },
+    {
+        "latitude": 40.4085263,
+        "longitude": -3.7009288,
+        "mean_price": 887681.075091575,
+        "quartier": "Centro, Madrid"
+    },
+    {
+        "latitude": 40.3861742,
+        "longitude": -3.6329556,
+        "mean_price": 153242.14388489208,
+        "quartier": "Puente de Vallecas, Madrid"
+    },
+    {
+        "latitude": 40.3814357,
+        "longitude": -3.7061415,
+        "mean_price": 170555.04938271604,
+        "quartier": "Pradolongo, Madrid"
+    },
+    {
+        "latitude": 40.4016899,
+        "longitude": -3.7459242,
+        "mean_price": 194511.67938931298,
+        "quartier": "Lucero, Madrid"
+    },
+    {
+        "latitude": 40.4586554,
+        "longitude": -3.6270763,
+        "mean_price": 1662222.9299363056,
+        "quartier": "Conde Orgaz-Piovera, Madrid"
+    },
+    {
+        "latitude": 40.3665959,
+        "longitude": -3.7178566,
+        "mean_price": 204671.12727272726,
+        "quartier": "Orcasitas, Madrid"
+    },
+    {
+        "latitude": 40.3937574,
+        "longitude": -3.7116516,
+        "mean_price": 197935.92,
+        "quartier": "Carabanchel, Madrid"
+    },
+    {
+        "latitude": 40.412904,
+        "longitude": -3.6935305,
+        "mean_price": 895877.7777777778,
+        "quartier": "Huertas-Cortes, Madrid"
+    },
+    {
+        "latitude":40.371129,
+        "longitude":-3.6135502,
+        "mean_price": 250755.77985074627,
+        "quartier": "Ensanche de Vallecas - La Gavia, Madrid"
+    },
+    {
+        "latitude": 40.4610163,
+        "longitude": -3.6836958,
+        "mean_price": 1167179.6641791044,
+        "quartier": "Nueva España, Madrid"
+    },
+    {
+        "latitude": 40.4771211,
+        "longitude": -3.690843,
+        "mean_price": 508848.34408602153,
+        "quartier": "La Paz, Madrid"
+    },
+    {
+        "latitude": 40.4976639,
+        "longitude": -3.7222629,
+        "mean_price": 683000.0,
+        "quartier": "Arroyo del Fresno, Madrid"
+    },
+    {
+        "latitude": 40.4399099,
+        "longitude": -3.6501655,
+        "mean_price": 344111.76851851854,
+        "quartier": "Concepción, Madrid"
+    },
+    {
+        "latitude": 40.3921952,
+        "longitude": -3.6502042,
+        "mean_price": 148405.0,
+        "quartier": "Portazgo, Madrid"
+    },
+    {
+        "latitude":40.4764884,
+        "longitude":-3.6594029,
+        "mean_price": 374865.3846153846,
+        "quartier": "Apóstol Santiago, Madrid"
+    },
+    {
+        "latitude": 40.3867589,
+        "longitude": -3.7540455,
+        "mean_price": 210145.0634920635,
+        "quartier": "Aluche, Madrid"
+    },
+    {
+        "latitude": 40.4103313,
+        "longitude": -3.6525288,
+        "mean_price": 219996.63333333333,
+        "quartier": "Moratalaz, Madrid"
+    },
+    {
+        "latitude": 40.4582549,
+        "longitude": -3.6903482,
+        "mean_price": 561402.2482517483,
+        "quartier": "Tetuán, Madrid"
+    },
+    {
+        "latitude": 40.4251481,
+        "longitude": -3.6348586991914296,
+        "mean_price": 225272.25,
+        "quartier": "Pueblo Nuevo, Madrid"
+    },
+    {
+        "latitude": 40.4055256,
+        "longitude": -3.644278,
+        "mean_price": 212191.975,
+        "quartier": "Vinateros, Madrid"
+    },
+    {
+        "latitude": 40.3709866,
+        "longitude": -3.6132187,
+        "mean_price": 196690.9294117647,
+        "quartier": "Villa de Vallecas, Madrid"
+    },
+    {
+        "latitude": 40.4128961,
+        "longitude": -3.669897,
+        "mean_price": 829049.9666666667,
+        "quartier": "Niño Jesús, Madrid"
+    },
+    {
+        "latitude": 40.4803552,
+        "longitude": -3.7237286,
+        "mean_price": 642651.2268518518,
+        "quartier": "Peñagrande, Madrid"
+    },
+    {
+        "latitude": 40.4221506,
+        "longitude": -3.680872645125094,
+        "mean_price": 2154973.451327434,
+        "quartier": "Recoletos, Madrid"
+    },
+    {
+        "latitude": 40.3952251,
+        "longitude": -3.7067174,
+        "mean_price": 198070.82352941178,
+        "quartier": "San Isidro, Madrid"
+    },
+    {
+        "latitude": 40.47587,
+        "longitude": -3.6394332,
+        "mean_price": 264387.578313253,
+        "quartier": "Pinar del Rey, Madrid"
+    },
+    {
+        "latitude": 40.3721599,
+        "longitude": -3.7712634,
+        "mean_price": 189500.0,
+        "quartier": "Cuatro Vientos, Madrid"
+    },
+    {
+        "latitude": 40.4013238,
+        "longitude": -3.6748372,
+        "mean_price": 404406.862745098,
+        "quartier": "Adelfas, Madrid"
+    },
+    {
+        "latitude": 40.40597155,
+        "longitude": -3.652841300000004,
+        "mean_price": 296800.0,
+        "quartier": "Media Legua, Madrid"
+    },
+    {
+        "latitude": 40.4931887,
+        "longitude": -3.6564023,
+        "mean_price": 1608472.0934782608,
+        "quartier": "Hortaleza, Madrid"
+    },
+    {
+        "latitude": 40.4342951,
+        "longitude": -3.717938,
+        "mean_price": 573242.156626506,
+        "quartier": "Arapiles, Madrid"
+    },
+    {
+        "latitude": 40.4076974,
+        "longitude": -3.7314174,
+        "mean_price": 210016.13294797688,
+        "quartier": "Puerta del Ángel, Madrid"
+    },
+    {
+        "latitude": 40.4505016,
+        "longitude": -3.6482719,
+        "mean_price": 674656.25,
+        "quartier": "San Juan Bautista, Madrid"
+    },
+    {
+        "latitude": 40.4349358,
+        "longitude": -3.7147092,
+        "mean_price": 1223775.3818181818,
+        "quartier": "Chamberí, Madrid"
+    },
+    {
+        "latitude": 40.4343745,
+        "longitude": -3.6774202,
+        "mean_price": 1376487.3417721519,
+        "quartier": "Castellana, Madrid"
+    },
+    {
+        "latitude":40.4364379,
+        "longitude":-3.6857028,
+        "mean_price": 1490860.5404814004,
+        "quartier": "Barrio de Salamanca, Madrid"
+    },
+    {
+        "latitude": 40.4289891,
+        "longitude": -3.7300201,
+        "mean_price": 399707.1875,
+        "quartier": "Casa de Campo, Madrid"
+    },
+    {
+        "latitude":40.5205538,
+        "longitude":-3.7780738,
+        "mean_price": 494750.0,
+        "quartier": "El Pardo, Madrid"
+    },
+    {
+        "latitude": 40.3884385,
+        "longitude": -3.6439266,
+        "mean_price": 157124.45323741008,
+        "quartier": "Palomeras Bajas, Madrid"
+    },
+    {
+        "latitude": 40.3455389,
+        "longitude": -3.7109697,
+        "mean_price": 141729.8524590164,
+        "quartier": "Villaverde, Madrid"
+    },
+    {
+        "latitude": 40.41493965,
+        "longitude": -3.667729635799363,
+        "mean_price": 538907.459770115,
+        "quartier": "Estrella, Madrid"
+    },
+    {
+        "latitude": 40.3133291,
+        "longitude": -3.7295534,
+        "mean_price": 757128.5221674877,
+        "quartier": "Chueca-Justicia, Madrid"
+    },
+    {
+        "latitude": 40.482903,
+        "longitude": -3.6640765,
+        "mean_price": 787266.6666666666,
+        "quartier": "Atalaya, Madrid"
+    },
+    {
+        "latitude": 40.3696095,
+        "longitude": -3.759682,
+        "mean_price": 182850.98333333334,
+        "quartier": "Buena Vista, Madrid"
+    },
+    {
+        "latitude": 40.422289,
+        "longitude": -3.6720291,
+        "mean_price": 850879.8895027625,
+        "quartier": "Goya, Madrid"
+    },
+    {
+        "latitude": 40.385663050000005,
+        "longitude": -3.76076520632454,
+        "mean_price": 193678.92857142858,
+        "quartier": "Latina, Madrid"
+    },
+    {
+        "latitude":40.5182857,
+        "longitude":-3.7769325,
+        "mean_price": 1586370.167115903,
+        "quartier": "Moncloa, Madrid"
+    },
+    {
+        "latitude": 40.3818314,
+        "longitude": -3.7283097,
+        "mean_price": 171342.8729281768,
+        "quartier": "Abrantes, Madrid"
+    },
+    {
+        "latitude": 40.3540894,
+        "longitude": -3.6816592,
+        "mean_price": 228568.20253164557,
+        "quartier": "Butarque, Madrid"
+    },
+    {
+        "latitude": 40.3992925,
+        "longitude": -3.6373206,
+        "mean_price": 409400.0,
+        "quartier": "Horcajo, Madrid"
+    },
+    {
+        "latitude": 40.5023791,
+        "longitude": -3.2547149,
+        "mean_price": 185412.39333333334,
+        "quartier": "Palomeras sureste, Madrid"
+    },
+    {
+        "latitude":40.4336632,
+        "longitude":-3.6942857,
+        "mean_price": 1347886.4417475727,
+        "quartier": "Almagro, Madrid"
+    },
+    {
+        "latitude": 40.3423454,
+        "longitude": -3.6872259,
+        "mean_price": 102495.24657534246,
+        "quartier": "San Cristóbal, Madrid"
+    },
+    {
+        "latitude": 40.4289237,
+        "longitude": -3.7149592,
+        "mean_price": 835329.0983606557,
+        "quartier": "Argüelles, Madrid"
+    },
+    {
+        "latitude":40.3996221,
+        "longitude":-3.6317093,
+        "mean_price": 186833.33333333334,
+        "quartier": "Pavones, Madrid"
+    },
+    {
+        "latitude": 40.3568726,
+        "longitude": -3.7037572,
+        "mean_price": 207342.1052631579,
+        "quartier": "12 de Octubre-Orcasur, Madrid"
+    },
+    {
+        "latitude": 40.4756208,
+        "longitude": -3.7398898,
+        "mean_price": 943621.6216216217,
+        "quartier": "Fuentelarreina, Madrid"
+    },
+    {
+        "latitude": 40.3651668,
+        "longitude": -3.6908772,
+        "mean_price": 215978.41428571427,
+        "quartier": "San Fermín, Madrid"
+    },
+    {
+        "latitude": 40.4602981,
+        "longitude": -3.7688551,
+        "mean_price": 919696.449704142,
+        "quartier": "Aravaca, Madrid"
+    },
+    {
+        "latitude": 40.4509328,
+        "longitude": -3.6674525,
+        "mean_price": 896935.2780748663,
+        "quartier": "Bernabéu-Hispanoamérica, Madrid"
+    },
+    {
+        "latitude": 40.4289262,
+        "longitude": -3.678308,
+        "mean_price": 820096.7032967033,
+        "quartier": "Lista, Madrid"
+    },
+    {
+        "latitude": 40.4407805,
+        "longitude": -3.6598947,
+        "mean_price": 453787.9746835443,
+        "quartier": "San Pascual, Madrid"
+    },
+    {
+        "latitude":40.5053359,
+        "longitude":-3.6959917,
+        "mean_price": 686448.9552238806,
+        "quartier": "Montecarmelo, Madrid"
+    },
+    {
+        "latitude": 40.5060934,
+        "longitude": -3.6747143,
+        "mean_price": 502090.38613861386,
+        "quartier": "Las Tablas, Madrid"
+    },
+    {
+        "latitude": 40.4629571,
+        "longitude": -3.7066807,
+        "mean_price": 243988.1447368421,
+        "quartier": "Berruguete, Madrid"
+    },
+    {
+        "latitude":40.4931887,
+        "longitude":-3.6564023,
+        "mean_price": 541315.1153846154,
+        "quartier": "Sanchinarro, Madrid"
+    },
+    {
+        "latitude": 40.3735643,
+        "longitude": -3.6190286,
+        "mean_price": 155088.09868421053,
+        "quartier": "Casco Histórico de Vallecas, Madrid"
+    },
+    {
+        "latitude": 40.3767252,
+        "longitude": -3.7800311,
+        "mean_price": 1348260.5839416059,
+        "quartier": "Ciudad Universitaria, Madrid"
+    }
+]

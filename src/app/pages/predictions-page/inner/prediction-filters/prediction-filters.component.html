@@ -1,0 +1,23 @@
+<h2 title2 class="text-10xl">Filters</h2>
+<p class="w-5/12 mt-2">
+    Select the prediction filters you want to apply to the price prediction. 
+</p>
+
+<div separator></div>
+
+<!-- <h3 title class="tracking-wider text-lg">1. Filters</h3> -->
+
+<div class="flex flex-row w-full gap-[1%] flex-wrap mt-5">
+    <div duration *ngFor="let item of variables" (click)="toggleVariable(item)" class="cursor-pointer overflow-hidden text-sm px-5 py-2.5 rounded-sm bg-[#f9f9f9] w-[19.20%] mb-3 text-[#0000009b] flex flex-row items-center" [class.selected]="isIncluded(item)">
+        <span duration class="w-10/12 capitalize">{{item.label | transloco}}</span>
+        <span duration icon class="w-2/12 text-xl mt-[1px] text-[#3b82f6] opacity-0">done</span>
+    </div>
+</div>
+
+<div separator></div>
+
+<button button class="flex items-center justify-between px-6 py-3 tracking-wider text-sm" [disabled]="!hasSelection" (click)="onSubmit()">
+    <span>Next</span>
+    <span class="px-1"></span>
+    <span icon class="text-xs mt-[3px]">arrow_forward_ios</span> 
+</button>

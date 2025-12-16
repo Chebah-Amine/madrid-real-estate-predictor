@@ -1,0 +1,66 @@
+<div class="flex flex-row w-full">
+
+
+    <!-- LEF PART -->
+
+    <div class="w-6/12">
+        
+        <div class="w-11/12">
+            <div selection s1 class="w-full bg-[#f9fbf9] rounded-lg px-12 py-5">
+                <div class="flex flex-row items-center text-[#39403b]">
+                    <span icon class="text-2xl">model_training</span>
+                    <span class="uppercase text-xs tracking-wider font-bold px-2">Predicted price</span>
+                </div>
+                <div class="text-5xl mt-1 font-extrabold">
+                    <span id="countup">0</span> <span class="mx-5">€</span>
+                </div>
+                <div class="text-xs mt-5 opacity-80 text-[#39403b] w-9/12">
+                    Here indicate the model that has been used to make this prediction.
+                </div>
+            </div>
+        </div>
+
+        <div selection s2 class="w-11/12 mt-5">
+            <div class="bg-[#f9fafbc2] w-full rounded-md px-12 py-5">
+                <div class="flex flex-row items-center text-[#39403b]">
+                    <span icon class="text-2xl">backup_table</span>
+                    <span class="uppercase text-xs tracking-wider font-bold px-2">Summary</span>
+                </div>
+                <div class="text-xs mt-1 opacity-80 text-[#39403b] w-9/12">
+                    Summary of selected variables and assigned values to make this prediction.
+                </div>
+            </div>
+        </div>
+
+        <div *ngFor="let item of display" selection s2 class="w-11/12">
+            <div class=" mt-2 bg-[#f9fafbc2] w-full rounded-md px-12 py-3 text-sm flex justify-between">
+                <span class="font-semibold uppercase text-[.75rem]">{{item.name | transloco}}</span>
+                <span class="text-right uppercase text-[.75rem]">{{item.value}}</span>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+    <!-- RIGHT PART -->
+    
+    <div class="w-6/12">
+        
+        <h2 title2 class="text-10xl">Results</h2>
+
+        <p class="w-10/12 mt-2">
+            Prediction results are displayed in this page along with a summary of selected variables.
+        </p>
+        <div separator></div>
+
+        <button button class="flex items-center justify-between px-6 py-2 tracking-wider text-sm"  (click)="onRestartButton()">
+            <span>Restart</span>
+            <span class="px-1"></span>
+            <span icon class="text-lg mt-[1px]">restart_alt</span> 
+        </button>
+
+    </div>
+
+    
+</div>
