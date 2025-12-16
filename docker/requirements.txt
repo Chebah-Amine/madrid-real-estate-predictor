@@ -1,0 +1,12 @@
+flask
+gunicorn
+flask-testing
+pytest-mongodb
+coverage
+pandas
+pymongo
+mongomock
+python-dotenv
+flake8
+autopep8
+safety
