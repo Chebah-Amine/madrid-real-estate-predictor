@@ -1,0 +1,96 @@
+<div class="mx-auto w-9/12">
+
+  <app-navbar></app-navbar>
+
+  <div separator></div>
+
+  <h2 title2 class="text-10xl">Statistics</h2>
+  <p class="w-5/12 mt-2">Here are displayed some of the most pertinent statistics of the dataset.</p>
+  
+  <div separator></div>
+  <div separator></div>
+  <div separator></div>
+
+  <div class="flex flex-row">
+    <div class="flex flex-row">
+      <div class="w-5/12 rounded-xl overflow-hidden">
+        <img src="assets/13.png" alt="Image 1" class="w-full">
+      </div>
+      <div class="w-7/12">
+        <p class="mx-8 font-bold text-2xl mb-4">1. Matrice de corrélations</p>
+        <p class="mx-8 text-justify">Dans ce graphique, on compare le "buy_price" (prix d'achat) avec d'autres variables telles que "n_rooms" (nombre de chambres), "sq_mt_built" (surface en mètres carrés construits), "n_bathrooms" (nombre de salles de bains). On note que le prix de vente est fortement corrélé avec la surface et un peu moins avec le nombre de pièces du bien.  </p>
+      </div>
+    </div>
+  </div>
+
+  <div separator></div>
+  <div separator></div>
+
+  <p class="font-bold text-2xl mt-10 mb-8">2. Statistiques introductives</p>
+
+  <div class="flex flex-row">
+    <!-- CHART 1 : Prices by rooms number -->
+    <div class="w-3/5 bg-gray-200 bg-opacity-25 rounded-lg">
+      <div class="p-10">
+        <div><canvas id="chart-1" class="h-full w-full"></canvas></div>
+        <div class="text-center mt-4">[1] <span class="italic">Rent and buy prices depending on the room number.</span></div>
+      </div>
+    </div>    
+    <!-- CHART 2 : A pie chart of the distribution of housing types in Madrid -->
+    <div class="w-2/5 bg-opacity-25 rounded-lg">
+      <div class="p-10 h-full">
+        <div><canvas id="chart-3" class="h-full w-full"></canvas></div>
+        <div class="w-100 text-center mt-4">[2] <span class="italic">Distribution of housing types in Madrid.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="mt-10 w-9/12 text-justify">
+    Nous proposons en second lieu des statistiques introductives pour visualiser les données. Le graphique 1 ci-dessus est un histogramme qui présente la distribution des prix en fonction du nombre de pièces de l'appartement sur lesquelles nous observons des variations manifestes. Cette répartition est renforcée par le camembert qui représente la répartition des types de logements présents dans le dataset. 
+  </p>
+
+
+  <div separator></div>
+  <div separator></div>
+
+  <p class="font-bold text-2xl mt-4 my-8">3. Statistiques utilitaires</p>
+
+  <div class="flex flex-row">
+      <div class="w-1/2 p-4">
+        <img src="assets/2.png" alt="Image 1" class="w-full">
+        <p class="mt-2 text-justify"> On observe une concentration élevée de biens avec un nombre de pièces allant de 1 à 5, avec un pic pour ceux ayant 3 pièces. Cela indique que les biens à 3 pièces sont les plus courants sur le marché</p>
+      </div>
+      <div separator></div>
+      <div class="w-1/2 p-4">
+        <img src="assets/10.png" alt="Image 2" class="w-full">
+        <p class="mt-2 text-justify"> Le graphique indique une tendance où le prix médian des propriétés augmente avec le nombre de chambres, ce qui est attendu, car des propriétés plus grandes avec plus de chambres ont tendance à être plus coûteuses.
+        </p>
+      </div>
+  </div>
+    
+  <div separator></div>
+  <div separator></div>
+
+  <div class="flex flex-row">
+      <div class="w-1/2 p-4">
+        <img src="assets/4.png" alt="Image 1" class="w-full">
+        <p class="mt-2 text-justify">Le prix semble augmenter avec la taille de la surface, ce qui est cohérent avec le marché immobilier où les biens plus grands sont généralement plus chers.</p>
+      </div>
+      <div class="w-1/2 p-4">
+        <img src="assets/1.png" alt="Image 1" class="w-full">
+        <p class="mt-2 text-justify">Les quartiers en haut de la liste, tels que Moncloa et Hortaleza, présentent les plus grandes tailles moyennes de chambres. Cela pourrait indiquer des propriétés plus spacieuses, souvent associées à des zones résidentielles haut de gamme.
+        </p>
+      </div>
+  </div>
+
+  <div separator></div>
+  <div separator></div>
+
+  <div class="flex"> 
+      <div class=" p-4">
+        <img src="assets/11.png" alt="Image 1">
+        <p class="mt-2 text-justify">On peut observer les périodes de croissance et de ralentissement dans la construction immobilière. Les biens les plus anciens, construits avant 1960, semblent être moins nombreux que ceux construits après cette période. Cela peut suggérer que le parc immobilier s'est fortement développé et modernisé au cours de la seconde moitié du 20ème siècle.</p>
+      </div> 
+  </div>
+
+</div> 

@@ -1,0 +1,898 @@
+﻿[
+    {
+        "ref":  "0796011",
+        "name":  " Palacio",
+        "population":  22372.000000000000709315068493,
+        "latitude":  40.4164031,
+        "longitude":  -3.7113796
+    },
+    {
+        "ref":  "0796012",
+        "name":  " Embajadores",
+        "population":  44646.000000000006172815533981,
+        "latitude":  40.410399,
+        "longitude":  -3.7016245
+    },
+    {
+        "ref":  "0796013",
+        "name":  " Cortes",
+        "population":  10532.0000000000008,
+        "latitude":  40.412904,
+        "longitude":  -3.6935305
+    },
+    {
+        "ref":  "0796014",
+        "name":  " Justicia",
+        "population":  16400.000000000000186666666667,
+        "latitude":  40.3133291,
+        "longitude":  -3.7295534
+    },
+    {
+        "ref":  "0796015",
+        "name":  " Universidad",
+        "population":  30738.000000000000610322580645,
+        "latitude":  40.4290339,
+        "longitude":  -3.7093449
+    },
+    {
+        "ref":  "0796016",
+        "name":  " Sol",
+        "population":  7337.0000000000000413111111111,
+        "latitude":  40.4069996,
+        "longitude":  -3.7113736
+    },
+    {
+        "ref":  "0796021",
+        "name":  " Imperial",
+        "population":  22642.999999999999830510204082,
+        "latitude":  40.4108865,
+        "longitude":  -3.7204569
+    },
+    {
+        "ref":  "0796022",
+        "name":  " Las Acacias",
+        "population":  36650.000000000000995454545455,
+        "latitude":  40.4008854,
+        "longitude":  -3.7173556
+    },
+    {
+        "ref":  "0796023",
+        "name":  " La Chopera",
+        "population":  19754.9999999999976,
+        "latitude":  40.5084454,
+        "longitude":  -3.9099416
+    },
+    {
+        "ref":  "0796024",
+        "name":  " Legazpi",
+        "population":  18942.000000000000367372262774,
+        "latitude":  40.3860781,
+        "longitude":  -3.6857698
+    },
+    {
+        "ref":  "0796025",
+        "name":  " Delicias",
+        "population":  27268.9999999999972,
+        "latitude":  40.3925693,
+        "longitude":  -3.6949698
+    },
+    {
+        "ref":  "0796026",
+        "name":  " Palos de Moguer",
+        "population":  25592.000000000002437230769231,
+        "latitude":  40.4029966,
+        "longitude":  -3.6933908
+    },
+    {
+        "ref":  "0796027",
+        "name":  " Atocha",
+        "population":  1106.9999999999999,
+        "latitude":  40.4010214,
+        "longitude":  -3.6964752
+    },
+    {
+        "ref":  "0796031",
+        "name":  " Pacífico",
+        "population":  33646.0000000000020,
+        "latitude":  40.3766738,
+        "longitude":  -3.6007727
+    },
+    {
+        "ref":  "0796032",
+        "name":  " Adelfas",
+        "population":  18148.000000000000964918032787,
+        "latitude":  40.4013238,
+        "longitude":  -3.6748372
+    },
+    {
+        "ref":  "0796033",
+        "name":  " Estrella",
+        "population":  23156.000000000001670980392157,
+        "latitude":  40.41493965,
+        "longitude":  -3.667729635799363
+    },
+    {
+        "ref":  "0796034",
+        "name":  " Ibiza",
+        "population":  21348.999999999999269800000000,
+        "latitude":  40.4169705,
+        "longitude":  -3.6763451
+    },
+    {
+        "ref":  "0796035",
+        "name":  " Jerónimos",
+        "population":  7051.000000000000023,
+        "latitude":  40.4368813,
+        "longitude":  -3.3625439
+    },
+    {
+        "ref":  "0796036",
+        "name":  " Niño Jesús",
+        "population":  15171.999999999999810625000000,
+        "latitude":  40.4128961,
+        "longitude":  -3.669897
+    },
+    {
+        "ref":  "0796041",
+        "name":  " Recoletos",
+        "population":  15511.000000000000872873563218,
+        "latitude":  40.4221506,
+        "longitude":  -3.680872645125094
+    },
+    {
+        "ref":  "0796042",
+        "name":  " Goya",
+        "population":  29272.999999999994603376623377,
+        "latitude":  40.422289,
+        "longitude":  -3.6720291
+    },
+    {
+        "ref":  "0796043",
+        "name":  " Fuente del Berro",
+        "population":  20593.999999999999693614457831,
+        "latitude":  40.424977,
+        "longitude":  -3.6636998
+    },
+    {
+        "ref":  "0796044",
+        "name":  " Guindalera",
+        "population":  40670.000000000000150253164557,
+        "latitude":  40.436356,
+        "longitude":  -3.6680189
+    },
+    {
+        "ref":  "0796045",
+        "name":  " Lista",
+        "population":  20754.999999999998343518518519,
+        "latitude":  40.4289262,
+        "longitude":  -3.678308
+    },
+    {
+        "ref":  "0796046",
+        "name":  " Castellana",
+        "population":  17009.999999999999868181818182,
+        "latitude":  40.4343745,
+        "longitude":  -3.6774202
+    },
+    {
+        "ref":  "0796051",
+        "name":  " El Viso",
+        "population":  17047.999999999998222325581395,
+        "latitude":  40.4384674,
+        "longitude":  -3.6876354
+    },
+    {
+        "ref":  "0796052",
+        "name":  " Prosperidad",
+        "population":  36098.000000000002508118811881,
+        "latitude":  40.441239,
+        "longitude":  -3.6687377
+    },
+    {
+        "ref":  "0796053",
+        "name":  " Ciudad Jardín",
+        "population":  18321.999999999998679480519481,
+        "latitude":  40.4254209,
+        "longitude":  -3.6801804
+    },
+    {
+        "ref":  "0796054",
+        "name":  " Hispanoamérica",
+        "population":  31235.999999999995906666666667,
+        "latitude":  40.4509328,
+        "longitude":  -3.6674525
+    },
+    {
+        "ref":  "0796055",
+        "name":  " Nueva España",
+        "population":  24100.0000000000014,
+        "latitude":  40.4610163,
+        "longitude":  -3.6836958
+    },
+    {
+        "ref":  "0796056",
+        "name":  " Castilla",
+        "population":  16591.999999999999316901408451,
+        "latitude":  40.4823328,
+        "longitude":  -3.6743713
+    },
+    {
+        "ref":  "0796061",
+        "name":  " Bellas Vistas",
+        "population":  28413.999999999999476986301370,
+        "latitude":  40.4531728,
+        "longitude":  -3.7085473
+    },
+    {
+        "ref":  "0796062",
+        "name":  " Cuatro Caminos",
+        "population":  33957.000000000000914117647059,
+        "latitude":  40.4525986,
+        "longitude":  -3.6994965
+    },
+    {
+        "ref":  "0796063",
+        "name":  " Castillejos",
+        "population":  19984.000000000002242463768116,
+        "latitude":  40.4646391,
+        "longitude":  -3.6913216
+    },
+    {
+        "ref":  "0796064",
+        "name":  " Almenara",
+        "population":  22010.00000000000067,
+        "latitude":  40.4652707,
+        "longitude":  -3.6951869
+    },
+    {
+        "ref":  "0796065",
+        "name":  " Valdeacederas",
+        "population":  25242.000000000002724871794872,
+        "latitude":  40.4661252,
+        "longitude":  -3.7060344
+    },
+    {
+        "ref":  "0796066",
+        "name":  " Berruguete",
+        "population":  24320.000000000002053333333333,
+        "latitude":  40.4629571,
+        "longitude":  -3.7066807
+    },
+    {
+        "ref":  "0796071",
+        "name":  " Gaztambide",
+        "population":  22409.000000000000067224489796,
+        "latitude":  40.434483,
+        "longitude":  -3.7155482
+    },
+    {
+        "ref":  "0796072",
+        "name":  " Arapiles",
+        "population":  24187.999999999999587017543860,
+        "latitude":  40.4342951,
+        "longitude":  -3.717938
+    },
+    {
+        "ref":  "0796073",
+        "name":  " Trafalgar",
+        "population":  24528.000000000000756129032258,
+        "latitude":  40.3262831,
+        "longitude":  -3.8561527
+    },
+    {
+        "ref":  "0796074",
+        "name":  " Almagro",
+        "population":  19697.000000000000771770833333,
+        "latitude":  40.4336632,
+        "longitude":  -3.6942857
+    },
+    {
+        "ref":  "0796075",
+        "name":  " Ríos Rosas",
+        "population":  26809.999999999997678910891089,
+        "latitude":  40.4456833,
+        "longitude":  -3.6951174
+    },
+    {
+        "ref":  "0796076",
+        "name":  " Vallehermoso",
+        "population":  19770.9999999999984,
+        "latitude":  40.4426759,
+        "longitude":  -3.7141181
+    },
+    {
+        "ref":  "0796081",
+        "name":  " El Pardo",
+        "population":  3395.99999999999998248,
+        "latitude":  40.5205538,
+        "longitude":  -3.7780738
+    },
+    {
+        "ref":  "0796082",
+        "name":  " Fuentelarreina",
+        "population":  3191.9999999999996367814569536,
+        "latitude":  40.4756208,
+        "longitude":  -3.7398898
+    },
+    {
+        "ref":  "0796083",
+        "name":  " Peña Grande",
+        "population":  44264.00000000000308,
+        "latitude":  40.4803552,
+        "longitude":  -3.7237286
+    },
+    {
+        "ref":  "0796084",
+        "name":  " El Pilar",
+        "population":  45829.000000000008871094890511,
+        "latitude":  40.477088, 
+        "longitude":  -3.708799
+    },
+    {
+        "ref":  "0796085",
+        "name":  " La Paz",
+        "population":  33806.000000000001131520737327,
+        "latitude":  40.4771211,
+        "longitude":  -3.690843
+    },
+    {
+        "ref":  "0796086",
+        "name":  " Valverde",
+        "population":  59985.00000000000129,
+        "latitude":  40.5009512,
+        "longitude":  -3.6946274
+    },
+    {
+        "ref":  "0796087",
+        "name":  " Mirasierra",
+        "population":  30857.999999999998185,
+        "latitude":  40.4918869,
+        "longitude":  -3.7133758
+    },
+    {
+        "ref":  "0796088",
+        "name":  " El Goloso",
+        "population":  17383.999999999998622952236543,
+        "latitude":  40.556255, 
+        "longitude":  -3.704505
+    },
+    {
+        "ref":  "0796091",
+        "name":  " Casa de Campo",
+        "population":  12834.999999999997888,
+        "latitude":  40.4289891,
+        "longitude":  -3.7300201
+    },
+    {
+        "ref":  "0796092",
+        "name":  " Argüelles",
+        "population":  23917.999999999998996233766234,
+        "latitude":  40.4289237,
+        "longitude":  -3.7149592
+    },
+    {
+        "ref":  "0796093",
+        "name":  " Ciudad Universitaria",
+        "population":  16048.999999999999322978783593,
+        "latitude":  40.3767252,
+        "longitude":  -3.7800311
+    },
+    {
+        "ref":  "0796094",
+        "name":  " Valdezarza",
+        "population":  29256.999999999999070416666667,
+        "latitude":  40.4627092,
+        "longitude":  -3.7116683
+    },
+    {
+        "ref":  "0796095",
+        "name":  " Valdemarín",
+        "population":  6410.000000000000516,
+        "latitude":  40.4645168,
+        "longitude":  -3.7974372
+    },
+    {
+        "ref":  "0796096",
+        "name":  " El Plantío",
+        "population":  2722.999999999999992,
+        "latitude":  40.4686117,
+        "longitude":  -3.8080036
+    },
+    {
+        "ref":  "0796097",
+        "name":  " Aravaca",
+        "population":  25691.999999999993695699658703,
+        "latitude":  40.4602981,
+        "longitude":  -3.7688551
+    },
+    {
+        "ref":  "0796101",
+        "name":  " Los Cármenes",
+        "population":  17050.9999999999998,
+        "latitude":  40.4047609,
+        "longitude":  -3.7323334
+    },
+    {
+        "ref":  "0796102",
+        "name":  " Puerta del Angel",
+        "population":  41053.000000000002878840579710,
+        "latitude":  40.410497,
+        "longitude":  -3.7422646
+    },
+    {
+        "ref":  "0796103",
+        "name":  " Lucero",
+        "population":  35285.999999999998653882352941,
+        "latitude":  40.4016899,
+        "longitude":  -3.7459242
+    },
+    {
+        "ref":  "0796104",
+        "name":  " Aluche",
+        "population":  65322.000000000003320209790210,
+        "latitude":  40.3867589,
+        "longitude":  -3.7540455
+    },
+    {
+        "ref":  "0796105",
+        "name":  " Campamento",
+        "population":  18779.999999999998539563318777,
+        "latitude":  40.3980074,
+        "longitude":  -3.7673938
+    },
+    {
+        "ref":  "0796106",
+        "name":  " Cuatro Vientos",
+        "population":  5457.0000000000000424375000000,
+        "latitude":  40.3721599,
+        "longitude":  -3.7712634
+    },
+    {
+        "ref":  "0796107",
+        "name":  " Las Aguilas",
+        "population":  50960.999999999998892314049587,
+        "latitude":  40.383252,
+        "longitude":  -3.8106078
+    },
+    {
+        "ref":  "0796111",
+        "name":  " Comillas",
+        "population":  22109.999999999999850000000000,
+        "latitude":  40.3952943,
+        "longitude":  -3.7076526
+    },
+    {
+        "ref":  "0796112",
+        "name":  " Opañel",
+        "population":  32045.999999999998611052631579,
+        "latitude":  40.3974886,
+        "longitude":  -3.7161854
+    },
+    {
+        "ref":  "0796113",
+        "name":  " San Isidro",
+        "population":  37995.999999999998398315789474,
+        "latitude":  40.3952251,
+        "longitude":  -3.7067174
+    },
+    {
+        "ref":  "0796114",
+        "name":  " Vista Alegre",
+        "population":  44356.000000000000989815950920,
+        "latitude":  40.4069615,
+        "longitude":  -3.650958
+    },
+    {
+        "ref":  "0796115",
+        "name":  " Puerta Bonita",
+        "population":  33011.999999999999789750000000,
+        "latitude":  40.3759225,
+        "longitude":  -3.7390858
+    },
+    {
+        "ref":  "0796116",
+        "name":  " Buenavista",
+        "population":  45249.999999999999240178571429,
+        "latitude":  40.3696095,
+        "longitude":  -3.759682
+    },
+    {
+        "ref":  "0796117",
+        "name":  " Abrantes",
+        "population":  29398.000000000002733461538462,
+        "latitude":  40.3818314,
+        "longitude":  -3.7283097
+    },
+    {
+        "ref":  "0796121",
+        "name":  " Orcasitas",
+        "population":  22404.000000000001482556390977,
+        "latitude":  40.3665959,
+        "longitude":  -3.7178566
+    },
+    {
+        "ref":  "0796122",
+        "name":  " Orcasur",
+        "population":  13336.00000000000016,
+        "latitude":  40.3568726,
+        "longitude":  -3.7037572
+    },
+    {
+        "ref":  "0796123",
+        "name":  " San Fermín",
+        "population":  22948.000000000001894444444444,
+        "latitude":  40.3651668,
+        "longitude":  -3.6908772
+    },
+    {
+        "ref":  "0796124",
+        "name":  " Almendrales",
+        "population":  20609.999999999999748000000000,
+        "latitude":  40.3810675,
+        "longitude":  -3.7006396
+    },
+    {
+        "ref":  "0796125",
+        "name":  " Moscardó",
+        "population":  25407.000000000000777000000000,
+        "latitude":  40.3850604,
+        "longitude":  -3.7031823
+    },
+    {
+        "ref":  "0796126",
+        "name":  " Zofío",
+        "population":  13448.999999999999256623376623,
+        "latitude":  40.3655263,
+        "longitude":  -3.7139301
+    },
+    {
+        "ref":  "0796127",
+        "name":  " Pradolongo",
+        "population":  16867.99999999999876,
+        "latitude":  40.3814357,
+        "longitude":  -3.7061415
+    },
+    {
+        "ref":  "0796131",
+        "name":  " Entrevías",
+        "population":  33540.000000000000675,
+        "latitude":  40.3745833,
+        "longitude":  -3.6600647
+    },
+    {
+        "ref":  "0796132",
+        "name":  " San Diego",
+        "population":  39248.999999999999713679245283,
+        "latitude":  40.3960721,
+        "longitude":  -3.6708628
+    },
+    {
+        "ref":  "0796133",
+        "name":  " Palomeras Bajas",
+        "population":  39346.000000000000190232558140,
+        "latitude":  40.3884385,
+        "longitude":  -3.6439266
+    },
+    {
+        "ref":  "0796134",
+        "name":  " Palomeras Sureste",
+        "population":  42020.0000000000035,
+        "latitude":  40.5023791,
+        "longitude":  -3.2547149
+    },
+    {
+        "ref":  "0796135",
+        "name":  " Portazgo",
+        "population":  27665.000000000002062096774194,
+        "latitude":  40.3921952,
+        "longitude":  -3.6502042
+    },
+    {
+        "ref":  "0796136",
+        "name":  " Numancia",
+        "population":  45899.999999999998449890109890,
+        "latitude":  40.4029414,
+        "longitude":  -3.6603054
+    },
+    {
+        "ref":  "0796141",
+        "name":  " Pavones",
+        "population":  9117.999999999999823600000000,
+        "latitude":  40.3996221,
+        "longitude":  -3.6317093
+    },
+    {
+        "ref":  "0796142",
+        "name":  " Horcajo",
+        "population":  6435.00000000000078,
+        "latitude":  40.3992925,
+        "longitude":  -3.6373206
+    },
+    {
+        "ref":  "0796143",
+        "name":  " Marroquina",
+        "population":  27358.999999999999193600000000,
+        "latitude":  40.4047112,
+        "longitude":  -3.6362826
+    },
+    {
+        "ref":  "0796144",
+        "name":  " Media Legua",
+        "population":  17816.00000000000136,
+        "latitude":  40.40597155,
+        "longitude":  -3.652841300000004
+    },
+    {
+        "ref":  "0796145",
+        "name":  " Fontarrón",
+        "population":  16704.000000000000264489795918,
+        "latitude":  40.4007842,
+        "longitude":  -3.645123
+    },
+    {
+        "ref":  "0796146",
+        "name":  " Vinateros",
+        "population":  16769.000000000000589666666667,
+        "latitude":  40.4055256,
+        "longitude":  -3.644278
+    },
+    {
+        "ref":  "0796151",
+        "name":  " Ventas",
+        "population":  47336.999999999994196273291925,
+        "latitude":  40.4241347,
+        "longitude":  -3.6540575
+    },
+    {
+        "ref":  "0796152",
+        "name":  " Pueblo Nuevo",
+        "population":  60463.000000000003331666666667,
+        "latitude":  40.4251481,
+        "longitude":  -3.6348586991914296
+    },
+    {
+        "ref":  "0796153",
+        "name":  " Quintana",
+        "population":  24180.000000000000216901408451,
+        "latitude":  40.4356576,
+        "longitude":  -3.6471022
+    },
+    {
+        "ref":  "0796154",
+        "name":  " Concepción",
+        "population":  20546.000000000000582888888889,
+        "latitude":  40.4399099,
+        "longitude":  -3.6501655
+    },
+    {
+        "ref":  "0796155",
+        "name":  " San Pascual",
+        "population":  18103.99999999999902,
+        "latitude":  40.4407805,
+        "longitude":  -3.6598947
+    },
+    {
+        "ref":  "0796156",
+        "name":  " San Juan Bautista",
+        "population":  12363.99999999999848,
+        "latitude":  40.4505016,
+        "longitude":  -3.6482719
+    },
+    {
+        "ref":  "0796157",
+        "name":  " Colina",
+        "population":  6121.99999999999992,
+        "latitude":  40.4592017,
+        "longitude":  -3.6603386
+    },
+    {
+        "ref":  "0796158",
+        "name":  " Atalaya",
+        "population":  1560.000,
+        "latitude":  40.482903,
+        "longitude":  -3.6640765
+    },
+    {
+        "ref":  "0796159",
+        "name":  " Costillares",
+        "population":  21931.999999999999532222222222,
+        "latitude":  40.480295,
+        "longitude":  -3.6689981
+    },
+    {
+        "ref":  "0796161",
+        "name":  " Palomas",
+        "population":  6680.00000000000052,
+        "latitude":  40.4520638,
+        "longitude":  -3.608974
+    },
+    {
+        "ref":  "0796162",
+        "name":  " Piovera",
+        "population":  14450.00000000000092,
+        "latitude":  40.4586554,
+        "longitude":  -3.6270763
+    },
+    {
+        "ref":  "0796163",
+        "name":  " Canillas",
+        "population":  40500.000000,
+        "latitude":  40.4616834,
+        "longitude":  -3.6397578
+    },
+    {
+        "ref":  "0796164",
+        "name":  " Pinar del Rey",
+        "population":  51962.99999999999616,
+        "latitude":  40.47587,
+        "longitude":  -3.6394332
+    },
+    {
+        "ref":  "0796165",
+        "name":  " Apostol Santiago",
+        "population":  15153.00,
+        "latitude":  40.4753285,
+        "longitude":  -3.6681216
+    },
+    {
+        "ref":  "0796166",
+        "name":  " Valdefuentes",
+        "population":  51654.000000000002255,
+        "latitude":  40.4938698,
+        "longitude":  -3.6235973
+    },
+    {
+        "ref":  "0796171",
+        "name":  " San Andrés",
+        "population":  43473.000000000000659230769231,
+        "latitude":  40.3446298,
+        "longitude":  -3.7151909
+    },
+    {
+        "ref":  "0796172",
+        "name":  " San Cristobal",
+        "population":  15193.99999999999927,
+        "latitude":  40.3419474,
+        "longitude":  -3.6985056
+    },
+    {
+        "ref":  "0796173",
+        "name":  " Butarque",
+        "population":  17240.999999999999883406593407,
+        "latitude":  40.3540894,
+        "longitude":  -3.6816592
+    },
+    {
+        "ref":  "0796174",
+        "name":  " Los Rosales",
+        "population":  36487.000000000004001788079470,
+        "latitude":  40.3669961,
+        "longitude":  -3.6542926
+    },
+    {
+        "ref":  "0796175",
+        "name":  " Los Angeles",
+        "population":  30270.000000000003886915887850,
+        "latitude":  40.356534, 
+        "longitude":  -3.699337
+    },
+    {
+        "ref":  "0796181",
+        "name":  " Casco Histórico de Vallecas",
+        "population":  80244.000000000001280,
+        "latitude":  40.3735643,
+        "longitude":  -3.6190286
+    },
+    {
+        "ref":  "0796182",
+        "name":  " Santa Eugenia",
+        "population":  24117.000000000000271029411765,
+        "latitude":  40.3857939,
+        "longitude":  -3.6071335
+    },
+    {
+        "ref":  "0796191",
+        "name":  " Casco Histórico de Vicálvaro",
+        "population":  51586.999999999999251,
+        "latitude":  40.4052863,
+        "longitude":  -3.6072004
+    },
+    {
+        "ref":  "0796192",
+        "name":  " Ambroz",
+        "population":  18464.99999999999895,
+        "latitude":  40.4062346,
+        "longitude":  -3.6055142
+    },
+    {
+        "ref":  "0796201",
+        "name":  " Simancas",
+        "population":  26500.00000000000025,
+        "latitude":  40.436446, 
+        "longitude":  -3.627102
+    },
+    {
+        "ref":  "0796202",
+        "name":  " Hellín",
+        "population":  8832.99999999999904,
+        "latitude":  40.430849, 
+        "longitude":  -3.617218
+    },
+    {
+        "ref":  "0796203",
+        "name":  " Amposta",
+        "population":  8218.999999999999810675675676,
+        "latitude":  40.424897, 
+        "longitude":  -3.621515
+    },
+    {
+        "ref":  "0796204",
+        "name":  " Arcos",
+        "population":  23749.999999999999918931297710,
+        "latitude":  40.420103, 
+        "longitude":  -3.619833
+    },
+    {
+        "ref":  "0796205",
+        "name":  " Rosas",
+        "population":  31512.000000000003548047516199,
+        "latitude":  40.426886, 
+        "longitude":  -3.600346
+    },
+    {
+        "ref":  "0796206",
+        "name":  " Rejas",
+        "population":  15764.999999999999310,
+        "latitude":  40.444574, 
+        "longitude":  -3.573117
+    },
+    {
+        "ref":  "0796207",
+        "name":  " Canillejas",
+        "population":  28410.000000000000357668711656,
+        "latitude":  40.442861, 
+        "longitude":  -3.611984
+    },
+    {
+        "ref":  "0796208",
+        "name":  " El Salvador",
+        "population":  11370.000000000000108709677419,
+        "latitude":  40.446754, 
+        "longitude":  -3.634655
+    },
+    {
+        "ref":  "0796211",
+        "name":  " Alameda de Osuna",
+        "population":  19395.000000000001038181818182,
+        "latitude":  40.458764, 
+        "longitude":  -3.591805
+    },
+    {
+        "ref":  "0796212",
+        "name":  " Aeropuerto",
+        "population":  1786.000000000000005,
+        "latitude":  40.481351, 
+        "longitude":  -3.567669
+    },
+    {
+        "ref":  "0796213",
+        "name":  " Casco Histórico de Barajas",
+        "population":  7305.9999999999998615625000000,
+        "latitude":  40.475578, 
+        "longitude":  -3.579065
+    },
+    {
+        "ref":  "0796214",
+        "name":  " Timón",
+        "population":  11020.999999999999384024390244,
+        "latitude":  40.474108, 
+        "longitude":  -3.592298
+    },
+    {
+        "ref":  "0796215",
+        "name":  " Corralejos",
+        "population":  7365.000000000000094,
+        "latitude":  40.464607, 
+        "longitude":  -3.618677
+    }
+]

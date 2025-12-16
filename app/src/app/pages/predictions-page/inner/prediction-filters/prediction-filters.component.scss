@@ -1,0 +1,8 @@
+.selected {
+    color: #3b82f6;
+    background-color: #78a9f929;
+    // border-color: #16a34a;
+    transition: color 0s, background .3s, border .3s !important;
+    & [icon] { opacity: 1
+    }
+}

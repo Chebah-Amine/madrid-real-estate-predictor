@@ -1,0 +1,41 @@
+
+<!-- NAVBAR -->
+<div class="mx-auto w-full absolute top-0 !z-[99999]">
+    <div class="w-9/12 mx-auto">
+        <app-navbar></app-navbar>
+    </div>
+</div>
+
+
+<!-- MAP -->
+<div mapdiv class="!z-0 top-0 w-full h-[100vh]">
+
+    <app-map [dimensions]="{ width: '100%', height: '100%' }" [geo]="geodata">
+    </app-map>
+
+</div>
+
+
+<!-- TITLE -->
+<div class="w-fit absolute bottom-0 left-[12.5vw] !z-[99999] mb-4">
+    <div class="px-5 py-1 pb-1.5 flex items-center tracking-wider font-semibold text-white bg-[#000000C0] rounded-md" style="font-variant: small-caps;" >
+        {{ this.geodata.title() | lowercase }}
+    </div>
+</div>
+
+<!-- OPTIONS -->
+<div class="w-fit absolute bottom-0 right-[12.5vw] !z-[99999] ">
+        
+    <div class="relative cursor-pointer w-fit my-8 rounded-md flex flex-row justify-start">
+        <div class="p-2 w-fit text-[#000000B0] text-2xl rounded-md mx-2 bg-white shadow-[0_0_60PX_6PX_#090e1b1f]">
+            <div class="flex flex-row gap-2 h-full">
+                <span (click)="mapNeutral()" icon class="text-[#000000B0] font-extralight h-full text-2xl flex items-center justify-center p-2 py-1 rounded" item [class.selected]="this.geodata.title() === MapTypes.Neutral" [attr.title]="MapTypes.Neutral">map</span>
+                <span (click)="mapPrices()" icon class="text-[#000000B0] h-full text-2xl flex items-center justify-center p-2 py-1 rounded" item [class.selected]="this.geodata.title() === MapTypes.Prices" [attr.title]="MapTypes.Prices">euro</span>
+                <span (click)="mapPopulation()" icon class="text-[#000000B0] h-full text-2xl flex items-center justify-center p-2 py-1 rounded" item [class.selected]="this.geodata.title() === MapTypes.Population" [attr.title]="MapTypes.Population">groups</span>
+            </div>
+        </div>
+    </div>
+
+    
+
+</div>

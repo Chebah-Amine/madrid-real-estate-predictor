@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
+[icon] { font-family: 'Material Icons Round';
+}
+
+[title2] {
+    font-weight: 900;
+    font-size: 2.5em;
+    color: #1b1b24;
+    // text-shadow: 4px 5px 3px #00000026;
+}
+[separator] {
+    opacity: 0;
+    height: 1.8em;
+}
+[button] {
+    
+    border-radius: 5px;
+    background: #0a090d11;
+    color: #0a090ddf;
+
+    &, & * { transition: background .3s, color .0s !important; }
+    
+    &:hover {
+        background: #0a090ddf;
+        color: white;
+    }
+    &:disabled { opacity: .6; cursor: auto; pointer-events: none;
+    }
+
+    & [icon] { color: #0a090ddf;
+    }
+    &:hover [icon] { color: white;
+    }
+}
+[duration] {
+    transition-duration: .3s;
+}
+.map-shadow {
+    filter: drop-shadow( 0px 0px 10px #00000080 );
+}
+path:focus { outline: none !important; }

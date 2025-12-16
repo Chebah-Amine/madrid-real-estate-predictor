@@ -1,0 +1,44 @@
+
+<div class="mx-auto w-9/12">
+
+    <app-navbar></app-navbar>
+  
+    <div separator></div>
+  
+    <h2 title2 class="text-10xl">Dynamic</h2>
+    <p class="w-5/12 mt-2">This page shows some dynamic charts that updates according to the filters displayed below.</p>
+    
+    <div separator></div>
+    <div separator></div>
+
+    <div class="rounded-md p-10 py-8 bg-[#00000009]">
+
+        <div class="font-bold">Filters</div>
+        <div class="flex flex-row flew-wrap gap-2 mt-2">
+            <button duration class="whitespace-no-wrap text-[#0000006b] px-3 py-2 rounded-[2px] text-xs tracking-wide bg-[#0000001c] small-caps font-bold" (click)="toggleIsAccessible()" [class.selected]="isAccessible">is accessible</button>
+            <button duration class="whitespace-no-wrap text-[#0000006b] px-3 py-2 rounded-[2px] text-xs tracking-wide bg-[#0000001c] small-caps font-bold" (click)="toggleIsFloorUnder()" [class.selected]="isFloorUnder">is floor under</button>
+            <button duration class="whitespace-no-wrap text-[#0000006b] px-3 py-2 rounded-[2px] text-xs tracking-wide bg-[#0000001c] small-caps font-bold" (click)="toggleIsRenewalNeeded()" [class.selected]="isRenewalNeeded">is renewal needed</button>
+            <button duration class="whitespace-no-wrap text-[#0000006b] px-3 py-2 rounded-[2px] text-xs tracking-wide bg-[#0000001c] small-caps font-bold" (click)="toggleHasAc()" [class.selected]="hasAc">has ac</button>
+            <button duration class="whitespace-no-wrap text-[#0000006b] px-3 py-2 rounded-[2px] text-xs tracking-wide bg-[#0000001c] small-caps font-bold" (click)="toggleHasPool()" [class.selected]="hasPool">has pool</button>
+            <button duration class="whitespace-no-wrap text-[#0000006b] px-3 py-2 rounded-[2px] text-xs tracking-wide bg-[#0000001c] small-caps font-bold" (click)="toggleHasTerrace()" [class.selected]="hasTerrace">has terrace</button>
+            <button duration class="whitespace-no-wrap text-[#0000006b] px-3 py-2 rounded-[2px] text-xs tracking-wide bg-[#0000001c] small-caps font-bold" (click)="toggleHasBalcony()" [class.selected]="hasBalcony">has balcony</button>
+            <button duration class="whitespace-no-wrap text-[#0000006b] px-3 py-2 rounded-[2px] text-xs tracking-wide bg-[#0000001c] small-caps font-bold" (click)="toggleHasParking()" [class.selected]="hasParking">has parking</button>
+            <button duration class="whitespace-no-wrap text-[#0000006b] px-3 py-2 rounded-[2px] text-xs tracking-wide bg-[#0000001c] small-caps font-bold" (click)="toggleEnergyCertificate()" [class.selected]="energyCertificate">energy certificate</button>
+            <button duration class="whitespace-no-wrap text-[#0000006b] px-3 py-2 rounded-[2px] text-xs tracking-wide bg-[#0000001c] small-caps font-bold" (click)="toggleHasGarden()" [class.selected]="hasGarden">has garden</button>
+            <button duration class="whitespace-no-wrap text-[#0000006b] px-3 py-2 rounded-[2px] text-xs tracking-wide bg-[#0000001c] small-caps font-bold" (click)="toggleIsNewDevelopment()" [class.selected]="isNewDevelopment">is new development</button>
+        </div>
+        
+    </div>
+    <div class="rounded-md w-fit px-3 py-1 mt-2 text-[#0000006b] text-xs tracking-wide bg-[#00000009] small-caps font-bold ">{{lines}} results</div>
+    
+    <div separator></div>
+
+    <div class="w-full bg-[#00000007] bg-opacity-25 rounded-lg p-4">
+        <div class="p-10">
+            <div><canvas id="chart" class="h-full w-full"></canvas></div>
+            <div class="text-center w-full italic mt-2">Distribution of prices depending on the districts.</div>
+        </div>
+    </div>
+
+
+</div>

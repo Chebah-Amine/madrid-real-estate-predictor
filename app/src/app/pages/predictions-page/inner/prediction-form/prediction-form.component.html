@@ -1,0 +1,89 @@
+<div class="flex flex-row w-full">
+
+
+    <!-- LEF PART -->
+
+    <div class="w-6/12">
+        
+        <h2 title2 class="text-10xl">Predictions</h2>
+
+        <p class="w-10/12 mt-2">
+            In this page you can specify the desired values with which the model will predict the price value.
+        </p>
+        <div separator></div>
+
+        <button button class="flex items-center justify-between px-6 py-3 tracking-wider text-sm"  (click)="onPreviousButton()">
+            <span icon class="text-xs mt-[1px]">arrow_back_ios</span> 
+            <span class="px-1"></span>
+            <span>Previous</span>
+        </button>
+
+    </div>
+
+
+    <!-- RIGHT PART -->
+    
+    <div class="w-6/12">
+
+        <div #predictionForm class="bg-white rounded-md p-9 shadow-[0_0_60PX_6PX_#090e1b0F]">
+
+            <!-- FORM HERE -->
+            
+            <h3 title class="tracking-wider mb-2 text-lg">Prediction Form</h3>
+
+            <div separator></div>
+
+            <form [formGroup]="form">
+
+                <!-- STRINGS -->
+                <div *ngFor="let item of strings">
+                    <div inputgroup class="mt-3"> 
+                        <input formcontrol type="{{item.type}}" value="{{item.value}}" [formControlName]="item.label" class="w-full text-sm text-[0.85rem]" />
+                        <div label class="text-[0.85rem] capitalize">{{item.label | transloco}}</div>
+                    </div>
+                </div>
+                <div *ngIf="strings.length > 0" separator></div>
+
+
+                <!-- NUMBERS -->
+                <div class="flex flex-row flex-wrap w-full gap-[1%]">
+                    
+                    <div *ngFor="let item of numbers" class="w-[32.25%]">
+                        <div inputgroup class="mt-3"> 
+                            <input formcontrol type="{{item.type}}" value="{{item.value}}" [formControlName]="item.label" class="w-full text-sm text-[0.85rem]" />
+                            <div label class="text-[0.85rem] capitalize">{{item.label | transloco}}</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div *ngIf="numbers.length > 0" separator></div>
+
+
+                <!-- BOOLEANS -->
+                <div class="flex flex-row flex-wrap w-full gap-[1%]">
+                
+                    <div *ngFor="let item of booleans" class="">
+                        <label checkbox-container>
+                            <input type="checkbox" checked="{{item.value}}" [formControlName]="item.label" />
+                            <div checkboxgroup class="mt-4 overflow-hidden text-nowrap">
+                                <span label class="text-[0.78rem] flex items-center capitalize">{{item.label | transloco}}</span>
+                                <span class="px-2"></span>
+                                <span icon class="text-lg flex items-center text-white">done</span>
+                            </div>
+                        </label> 
+                    </div>
+
+                </div>
+                    
+            </form>
+
+            <div separator></div>
+            <div separator></div>
+
+            <button class="w-[32.25%] flex justify-around py-3 tracking-wider text-sm bg-[#0a090ddf] text-white rounded-md" [disabled]="disabled" (click)="onSubmitButton()">Submit</button>
+
+        </div>
+    </div>
+
+    
+</div>
