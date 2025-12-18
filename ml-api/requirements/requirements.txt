@@ -1,12 +1,8 @@
 flask
 gunicorn
-flask-testing
-coverage
 pandas
 python-dotenv
-flake8
 autopep8
-safety
 tensorflow
 joblib
 scikit-learn

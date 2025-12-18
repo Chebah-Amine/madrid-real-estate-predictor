@@ -1,33 +1,21 @@
-# Etape 1: Utiliser une image de base officielle Python, version 3.8 slim
-FROM python:3.11
+# Official python image
+FROM python:3.11-slim
 
-RUN apt-get update \
-    &&  apt-get install -y --no-install-recommends \
-    locales apt-utils git libicu-dev g++ libpng-dev libxml2-dev libzip-dev libonig-dev libxslt-dev unzip libpq-dev nodejs npm wget \
-    apt-transport-https lsb-release ca-certificates
+# Create the workdir in the container
+WORKDIR /ml
 
-RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen  \
-    &&  echo "fr_FR.UTF-8 UTF-8" >> /etc/locale.gen \
-    &&  locale-gen
+# Upgrade pip & setuptools to secure versions
+RUN pip install --no-cache-dir --upgrade pip setuptools
 
-# Etape 2: Définir le répertoire de travail dans le conteneur
-WORKDIR /psid
+# Install dependencies
+COPY requirements/ ./requirements/
+RUN pip install --no-cache-dir -r requirements/requirements.txt -r requirements/requirements-dev.txt
+# -r for requirements file
 
-# Etape 3: Copier les fichiers requirements.txt dans le conteneur
-COPY requirements.txt .
+COPY app/ ./app
 
-# Etape 4: Installer les dépendances
-RUN pip install --no-cache-dir -r requirements.txt
+# Port
+EXPOSE 7000
 
-# Etape 7: Définir la commande pour démarrer l'application
-CMD tail -f /dev/null
-
-# Etape 8: Définir le user
-RUN useradd -ms /bin/bash ml-user
-
-RUN chown -R ml-user:ml-user /psid
-
-RUN chmod 755 /psid
-
-USER ml-user
-
+# Default command
+CMD ["flask", "run", "--host=0.0.0.0", "--port=7000"]

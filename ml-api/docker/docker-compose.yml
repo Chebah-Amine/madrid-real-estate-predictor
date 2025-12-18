@@ -1,20 +1,15 @@
 services:
   flask-ml:
-    container_name: psid-ml-container
-    build: .
+    container_name: ml-container
+    build: 
+      context: ..
+      dockerfile: docker/Dockerfile
     ports:
       - "7000:7000"
     volumes:
-      - /etc/timezone:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
-      - ../:/psid
-    networks:
-      - net
+      - ../app:/ml/app
     environment:
       - FLASK_ENV=development
       - FLASK_RUN_HOST=0.0.0.0
-
-
-networks:
-  net:
-    driver: bridge
+      - FLASK_RUN_PORT=7000
+      - FLASK_APP=app:app # module_package:flask_variable, precise where is the app entry point

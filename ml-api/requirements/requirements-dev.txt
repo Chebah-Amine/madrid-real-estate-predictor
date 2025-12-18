@@ -1,0 +1,4 @@
+flask-testing
+coverage
+flake8
+safety
