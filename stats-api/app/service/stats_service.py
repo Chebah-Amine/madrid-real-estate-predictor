@@ -1,40 +1,47 @@
-from pymongo import MongoClient
-
-from app.service import get_mongo_config
+from app.config.extensions import get_collection
 
 
 class StatsService:
     def __init__(self):
-        self.mongo_uri, self.db_name, self.collection_name = get_mongo_config()
-        self.client = MongoClient(self.mongo_uri)
-        self.db = self.client[self.db_name]
-        self.collection = self.db[self.collection_name]
+        self.collection = get_collection()
 
     def get_mean_price_by_neighborhood(self):
         pipeline = [
+            # 1) Keep only documents that have usable GPS coordinates and a sale price
             {
                 "$match": {
-                    "latitude": {"$ne": None},
-                    "longitude": {"$ne": None}
+                    "latitude": {"$exists": True, "$ne": None},
+                    "longitude": {"$exists": True, "$ne": None},
+                    "buy_price": {"$exists": True, "$ne": None},
                 }
             },
+
+            # 2) Group by subtitle (neighbor name), compute average sale price,
+            #    and pick one representative GPS point (deterministic using $avg)
             {
                 "$group": {
-                    "_id": "$subtitle",
-                    "mean_price": {"$avg": "$buy_price"},
-                    "first_sale": {"$first": "$$ROOT"}
+                    "_id": "$subtitle",           # group key = the neighbor name
+                    "avg_buy_price": {"$avg": "$buy_price"},
+                    "avg_latitude": {"$avg": "$latitude"},
+                    "avg_longitude": {"$avg": "$longitude"},
+                    "count_sales": {"$sum": 1},           # how many sales contributed
                 }
             },
+
+            # 3) Shape the output: rename fields, remove _id, keep only what you want
             {
                 "$project": {
-                    "quartier": "$_id",
+                     # exclude col _id
                     "_id": 0,
-                    "mean_price": 1,
-                    "latitude": "$first_sale.latitude",
-                    "longitude": "$first_sale.longitude"
+                    "neighbor": "$_id",
+                    "mean_price": "$avg_buy_price",
+                    "latitude": "$avg_latitude",
+                    "longitude": "$avg_longitude",
+                    "sales_count": "$count_sales",
                 }
             }
         ]
+
 
         result = list(self.collection.aggregate(pipeline))
         return result

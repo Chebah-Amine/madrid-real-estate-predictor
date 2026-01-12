@@ -1,35 +1,43 @@
-version: '2.17'
-
 services:
-  flask-app:
-    container_name: psid-api-container
-    build: .
+  flask-stats:
+    container_name: stats-container
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    env_file:
+    # import the env variable in the container, so the project could use them
+    # not used to load the variables below in the docker compose file
+      - ../.env
     ports:
-      - "8000:8000"
+      - "7005:7005"
     volumes:
-      - /etc/timezone:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
-      - ../:/psid
+      - ../app:/stats/app
     networks:
       - net
     environment:
-      - FLASK_ENV=development
-      - FLASK_APP=app:create_app('development')
-      - FLASK_RUN_HOST=0.0.0.0
-      - MONGODB_URL=mongodb://admin:ChangeMe@mongodb:27017/sales
+      - FLASK_DEBUG=1
+      - MONGODB_URI=mongodb://${MONGODB_USERNAME}:${MONGODB_PASSWORD}@mongodb:27017/${MONGODB_DATABASE}?authSource=admin
+    command: flask --app "app:create_app('development')" run --host=0.0.0.0 --port=7005
     depends_on:
-      - mongodb
+      mongodb:
+        condition: service_healthy
 
   mongodb:
     container_name: database-container
     image: mongo:latest
     environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: ChangeMe
+      MONGO_INITDB_ROOT_USERNAME: ${MONGODB_ROOT_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGODB_DATABASE}
     volumes:
       - mongo-data:/data/db
     networks:
       - net
+    healthcheck:
+      test: ["CMD-SHELL", "mongosh --quiet -u $$MONGO_INITDB_ROOT_USERNAME -p $$MONGO_INITDB_ROOT_PASSWORD --authenticationDatabase admin --eval 'db.runCommand({ ping: 1 })' >/dev/null"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
 
 volumes:
   mongo-data:

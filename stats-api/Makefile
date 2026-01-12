@@ -1,50 +1,66 @@
-install:
-	docker compose -f ./docker/docker-compose.yml up -d --build
-.PHONY: install
+# COMPOSE is looking for a .env in his root directory ./docker
+
+include .env
+
+COMPOSE_FILE := ./docker/docker-compose.yml
+SERVICE      := flask-stats
+CONTAINER    := stats-container
+DB_CONTAINER := database-container
+
+# docker compose ... aim a service
+COMPOSE := docker compose --env-file .env -f $(COMPOSE_FILE)
+
+.PHONY: up build start stop restart logs exec down clean test lint fix-lint security-scan db-reset db-shell
+
+up:
+	$(COMPOSE) up -d --build
+
+build:
+	$(COMPOSE) build --no-cache
 
 start:
-	docker exec -it psid-api-container flask run --port 8000
-.PHONY: install
+	$(COMPOSE) up -d
+
+stop:
+	$(COMPOSE) stop
+
+restart:
+	$(COMPOSE) restart
+
+logs:
+	$(COMPOSE) logs -f $(SERVICE)
 
 exec:
-	docker exec -it psid-api-container bash
-.PHONY: exec
+	docker exec -it $(CONTAINER) bash
 
+down:
+	$(COMPOSE) down --remove-orphans
+
+clean:
+	$(COMPOSE) down --remove-orphans --volumes
+
+# docker exec ... aim a container
 test:
-	@echo "Lancement des tests..."
-	docker exec psid-api-container sh -c "export PYTHONPATH=/psid/app:$$PYTHONPATH && \
-	coverage run --omit='app/test/*' -m unittest discover && \
-	coverage xml && \
-	coverage report -m"
-.PHONY: test
-
+	@echo "Running tests with pytest + coverage..."
+	docker exec -it $(CONTAINER) sh -lc "export PYTHONPATH=/stats:$$PYTHONPATH && \
+	coverage run -m pytest -q && coverage report -m"
 
 lint:
-	docker exec -it psid-api-container flake8 .
-.PHONY: lint
+	docker exec -it $(CONTAINER) sh -lc "flake8 /stats"
 
 fix-lint:
-	docker exec -it psid-api-container autopep8 --in-place --aggressive --aggressive --recursive .
-.PHONY: lint
+	docker exec -it $(CONTAINER) sh -lc "autopep8 --in-place --aggressive --aggressive --recursive /stats"
 
 security-scan:
-	docker exec -it psid-api-container safety check --full-report
-.PHONY: security-scan
+	docker exec -it $(CONTAINER) sh -lc "safety check --full-report"
+
+db-shell:
+	docker exec -it $(DB_CONTAINER) mongosh -u ${MONGODB_ROOT_USER} -p ${MONGODB_ROOT_PASSWORD} --authenticationDatabase admin
 
 db-reset:
-	@echo "Suppression de la base de données ..."
-	docker exec database-container mongosh -u admin -p ChangeMe --authenticationDatabase admin --eval "db.dropDatabase()" sales
-	@echo "Création de la collection 'sales_madrid' dans la base de données..."
-	docker exec database-container mongosh -u admin -p ChangeMe --authenticationDatabase admin --eval "db.createCollection('sales_madrid')" sales
-	@echo "Import du dataset ..."
-	docker exec psid-api-container sh -c 'export PYTHONPATH=/psid/app:$$PYTHONPATH && python app/command/import_csv_to_mongodb.py'
-.PHONY: db-reset
-
-kill:
-	docker system prune -a
-	docker kill psid-api-container database-container
-	docker rm psid-api-container database-container
-	docker images
-.PHONY: kill
-
-
+	@echo "Suppression de la base ${MONGODB_DATABASE}..."
+	docker exec -it $(DB_CONTAINER) mongosh -u ${MONGODB_ROOT_USER} -p ${MONGODB_ROOT_PASSWORD} --authenticationDatabase admin --eval "db.getSiblingDB('${MONGODB_DATABASE}').dropDatabase()"
+	@echo "Création de la collection 'sales_madrid'..."
+	docker exec -it $(DB_CONTAINER) mongosh -u ${MONGODB_ROOT_USER} -p ${MONGODB_ROOT_PASSWORD} --authenticationDatabase admin --eval "db.getSiblingDB('${MONGODB_DATABASE}').createCollection('sales_madrid')"
+	@echo "Import du dataset..."
+	docker exec -it $(CONTAINER) sh -lc "export PYTHONPATH=/stats:$$PYTHONPATH && python /stats/app/command/import_csv_to_mongodb.py"
