@@ -1,0 +1,18 @@
+services:
+  front-web:
+    container_name: front-container
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      args:
+        NODE_VERSION: 24
+    ports:
+      - "4200:4200"
+    volumes:
+      # Mount source code
+      - ../app:/usr/src/app
+      # Keep node_modules inside container (avoid host OS conflicts)
+      - front_node_modules:/usr/src/app/node_modules
+
+volumes:
+  front_node_modules:
