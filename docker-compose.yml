@@ -1,0 +1,82 @@
+services:
+  ml-api:
+    container_name: ml-container
+    build:
+      context: ./ml-api
+      dockerfile: docker/Dockerfile
+    ports:
+      - "7000:7000"
+    volumes:
+      - ./ml-api/app:/app
+    environment:
+      - FLASK_ENV=development
+      - FLASK_RUN_HOST=0.0.0.0
+      - FLASK_RUN_PORT=7000
+      - FLASK_APP=app:app 
+    networks:
+      - mre-net
+
+  stats-api:
+    container_name: stats-container
+    build:
+      context: ./stats-api
+      dockerfile: docker/Dockerfile
+    ports:
+      - "7005:7005"
+    volumes:
+      - ./stats-api/app:/stats/app
+    env_file:
+      - ./stats-api/.env
+    environment:
+      - FLASK_ENV=development
+      - FLASK_RUN_HOST=0.0.0.0
+      - FLASK_RUN_PORT=7005
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    networks:
+      - mre-net
+
+  mongodb:
+    container_name: database-container
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGODB_ROOT_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGODB_DATABASE}
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD-SHELL", "mongosh --quiet -u $$MONGO_INITDB_ROOT_USERNAME -p $$MONGO_INITDB_ROOT_PASSWORD --authenticationDatabase admin --eval 'db.runCommand({ ping: 1 })' >/dev/null"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    networks:
+      - mre-net
+
+  front-app:
+    container_name: front-container
+    build:
+      context: ./front-app
+      dockerfile: docker/Dockerfile
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./front-app/app:/usr/src/app
+      - front_node_modules:/usr/src/app/node_modules
+    environment:
+      - ML_API_URL=http://localhost:7000
+      - STATS_API_URL=http://localhost:7005
+    depends_on:
+      - ml-api
+      - stats-api
+    networks:
+      - mre-net
+
+volumes:
+  mongo-data:
+  front_node_modules:
+
+networks:
+  mre-net:
+    driver: bridge
