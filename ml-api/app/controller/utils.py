@@ -9,11 +9,8 @@ EXPECTED_KEYS = {'sq_mt_built', 'n_rooms', 'n_bathrooms', 'floor', 'is_floor_und
 
 def validate_input(input_data):
     input_keys = set(input_data.keys())
-    missing_keys = EXPECTED_KEYS - input_keys
     extra_keys = input_keys - EXPECTED_KEYS
 
-    if missing_keys:
-        return False, f"Missing keys: {', '.join(missing_keys)}"
     if extra_keys:
         return False, f"Extra keys not expected: {', '.join(extra_keys)}"
     return True, "Input is valid"

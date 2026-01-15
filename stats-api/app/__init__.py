@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 from app.config.extensions import init_mongo
 from app.config.settings import config
 from app.controller.sales_controller import sales_bp
@@ -12,9 +13,16 @@ def create_app(config_name='development'):
     # Charger la configuration
     app.config.from_object(config[config_name])
     
+    # Allow Angular dev server
+    CORS(
+        app,
+        resources={r"/*": {"origins": ["http://localhost:4200"]}},
+        supports_credentials=False,
+    )
+    
     # Initialiser les extensions
     init_mongo(app)
-    
+
     # Enregistrer les blueprints / routes / controller
     app.register_blueprint(main)
     app.register_blueprint(sales_bp)

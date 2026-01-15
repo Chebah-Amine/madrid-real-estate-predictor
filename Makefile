@@ -1,5 +1,8 @@
+include ./stats-api/.env
+
 COMPOSE_FILE := ./docker-compose.yml
 COMPOSE := docker compose --env-file ./stats-api/.env -f $(COMPOSE_FILE)
+DB_CONTAINER := database-container
 
 .PHONY: up start stop down clean logs ps rebuild exec-ml exec-stats exec-front
 
@@ -18,12 +21,6 @@ down:
 clean:
 	$(COMPOSE) down --remove-orphans --volumes
 
-logs:
-	$(COMPOSE) logs -f
-
-ps:
-	$(COMPOSE) ps
-
 rebuild:
 	$(COMPOSE) build --no-cache
 	$(COMPOSE) up -d
@@ -36,3 +33,10 @@ exec-stats:
 
 exec-front:
 	docker exec -it front-container sh
+
+db-shell:
+	docker exec -it $(DB_CONTAINER) mongosh -u ${MONGODB_ROOT_USER} -p ${MONGODB_ROOT_PASSWORD} --authenticationDatabase admin
+
+svc ?=
+logs:
+	$(COMPOSE) logs -f $(svc)

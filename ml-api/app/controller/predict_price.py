@@ -17,6 +17,6 @@ def get_price():
     try:
         service = PredictPriceService(input_house)
         price = service.predict_price()
-        return jsonify({'predicted_price': price})
+        return jsonify({'price': price})
     except Exception as e:
         return jsonify({'error': str(e)}), 500

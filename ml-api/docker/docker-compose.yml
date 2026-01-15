@@ -12,4 +12,5 @@ services:
       - FLASK_ENV=development
       - FLASK_RUN_HOST=0.0.0.0
       - FLASK_RUN_PORT=7000
+      - FLASK_DEBUG=1
       - FLASK_APP=app:app # module_package:flask_variable, precise where is the app entry point
