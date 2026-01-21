@@ -1,7 +1,7 @@
-from app.test.utils import dict_contains_subset
-import pytest
-
-class TestStatsController:
+class TestMapController:
+    """
+    Functional tests for Map controller
+    """
 
     def test_get_mean_price_by_neighborhood(self, app, mock_mongo_client, collection, client):
         # GIVEN
@@ -87,23 +87,29 @@ class TestStatsController:
         # THEN
         assert collection.count_documents({}) == 0
         assert response.status_code == 404
-        assert response.json["message"] == "No neighborhood data available"
+        assert response.get_json() == {
+            "error": "no_data_found",
+            "message": "No data found",
+            "details": {"request_description": "Get mean price by neighborhood"}
+        }
 
     def test_get_mean_price_by_neighborhood_error(self, client, monkeypatch):
         # GIVEN 
-        import app.controller.stats_controller as stats_controller
+        import app.controller.stats.map_controller as map_controller
 
         def boom(self):
             raise RuntimeError("DB exploded")
         
         # Patch the method get_mean_price_by_neighborhood
-        monkeypatch.setattr(stats_controller.StatsService, "get_mean_price_by_neighborhood", boom)
+        monkeypatch.setattr(map_controller.MapService, "get_mean_price_by_neighborhood", boom)
 
         # WHEN 
         response = client.get("/stats/map/mean-price/neighborhood")
 
         # THEN
         assert response.status_code == 500
-        response_json = response.get_json()
-        assert response_json["error"] == "An unexpected error occurred"
-        assert "DB exploded" in response_json["details"]
+        assert response.get_json() == {
+            "error": "internal_server_error",
+            "message": "An unexpected error occured",
+            "details": "DB exploded"
+        }

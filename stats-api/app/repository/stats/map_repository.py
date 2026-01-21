@@ -1,10 +1,9 @@
 from app.config.extensions import get_collection
 
-
-class StatsService:
+class MapRepository:
     def __init__(self):
         self.collection = get_collection()
-
+    
     def get_mean_price_by_neighborhood(self):
         pipeline = [
             # 1) Keep only documents that have usable GPS coordinates and a sale price
@@ -44,4 +43,5 @@ class StatsService:
 
 
         result = list(self.collection.aggregate(pipeline))
-        return result
+
+        return result if len(result) > 0 else None

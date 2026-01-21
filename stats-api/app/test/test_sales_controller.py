@@ -74,7 +74,11 @@ class TestSalesController:
         # THEN
         assert response.status_code == 404
 
-        assert response.get_json() == {"error": "Sale not found nonexistent_id"}
+        assert response.get_json() == {
+            "error": "sale_note_found",
+            "message": "Sale not found: nonexistent_id",
+            "details": {"sale_id": "nonexistent_id"}
+        }
 
     def test_get_sale_error(self, client, monkeypatch):
         # GIVEN 
@@ -92,7 +96,8 @@ class TestSalesController:
 
         # THEN
         assert response.status_code == 500
-        response_json = response.get_json()
-        assert response_json["error"] == "An unexpected error occurred"
-        print(response_json)
-        assert "DB exploded" in response_json["details"]
+        assert response.get_json() == {
+            "error": "internal_server_error",
+            "message": "An unexpected error occured",
+            "details": "DB exploded"
+        }
