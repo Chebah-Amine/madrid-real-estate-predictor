@@ -25,14 +25,9 @@ rebuild:
 	$(COMPOSE) build --no-cache
 	$(COMPOSE) up -d
 
-exec-ml:
-	docker exec -it ml-container sh
-
-exec-stats:
-	docker exec -it stats-container sh
-
-exec-front:
-	docker exec -it front-container sh
+cnt ?=
+exec:
+	docker exec -it $(cnt) bash
 
 db-shell:
 	docker exec -it $(DB_CONTAINER) mongosh -u ${MONGODB_ROOT_USER} -p ${MONGODB_ROOT_PASSWORD} --authenticationDatabase admin
