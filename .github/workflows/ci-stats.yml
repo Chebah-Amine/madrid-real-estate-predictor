@@ -1,0 +1,111 @@
+name: CI Pipeline - Stats API
+
+on:
+    push:
+        branches: ["main", "develop"]
+        paths:
+            # Only trigger when stats-api files change
+            - "stats-api/**"
+            - ".github/workflows/ci-stats.yml"
+    pull_request:
+        branches: ["main", "develop", "feature/*", "fix/*", "infra/*"]
+        paths:
+            - "stats-api/**"
+            - ".github/workflows/ci-stats.yml"
+    workflow_dispatch: # Manual trigger for testing
+
+# Set default working directory for all steps
+defaults:
+    run:
+        working-directory: stats-api
+
+env:
+    PYTHON_VERSION: "3.11"
+    MONGODB_HOST: localhost
+    MONGODB_PORT: 27017
+    MONGODB_USERNAME: admin
+    MONGODB_PASSWORD: ChangeMe
+    MONGODB_DB: sales_test
+
+jobs:
+    build:
+        name: Build & Test
+        runs-on: ubuntu-latest
+
+        services:
+            mongodb:
+                image: mongo:latest
+                env:
+                    MONGO_INITDB_ROOT_USERNAME: admin
+                    MONGO_INITDB_ROOT_PASSWORD: ChangeMe
+                ports:
+                    - 27017:27017
+                options: >-
+                    --health-cmd "mongosh --eval 'db.adminCommand({ping: 1})'"
+                    --health-interval 10s
+                    --health-timeout 5s
+                    --health-retries 5
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+
+            - name: Set up Python
+              uses: actions/setup-python@v5
+              with:
+                  python-version: ${{ env.PYTHON_VERSION }}
+
+            - name: Install uv
+              uses: astral-sh/setup-uv@v4
+              with:
+                  enable-cache: true
+                  cache-dependency-glob: "stats-api/requirements/*.txt"
+
+            - name: Install dependencies
+              run: |
+                  uv pip install --system -r requirements/requirements.txt
+                  uv pip install --system -r requirements/requirements-dev.txt
+
+            - name: Security scan with Safety
+              env:
+                  SAFETY_API_KEY: ${{ secrets.SAFETY_API_KEY }}
+              run: |
+                  # Use API key if available, otherwise run with limited database
+                  if [ -n "$SAFETY_API_KEY" ]; then
+                    safety scan --detailed --key $SAFETY_API_KEY
+                  else
+                    echo "⚠️  Running Safety with free 30-day-old database"
+                    safety scan --detailed --disable-telemetry
+                  fi
+                  echo "✅ Safety scan passed!"
+
+            - name: Lint and format check with Ruff
+              run: |
+                  ruff check app/
+                  ruff format --check app/
+                  echo "✅ Ruff passed!"
+
+            - name: Run tests with coverage
+              env:
+                  PYTHONPATH: ${{ github.workspace }}/stats-api/app
+              run: |
+                  cd app/
+                  coverage run -m pytest test/
+                  coverage xml -o test/coverage.xml
+                  coverage report
+
+            - name: SonarCloud Scan
+              uses: SonarSource/sonarqube-scan-action@v7.0.0
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+              with:
+                  projectBaseDir: stats-api
+                  args: >
+                      -Dsonar.projectKey=Chebah-Amine_madrid-real-estate-predictor
+                      -Dsonar.organization=chebah-amine
+                      -Dsonar.python.coverage.reportPaths=app/test/coverage.xml
+                      -Dsonar.coverage.exclusions=app/test/**/*
+                      -Dsonar.qualitygate.wait=true

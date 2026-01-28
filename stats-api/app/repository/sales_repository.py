@@ -1,5 +1,6 @@
 from app.config.extensions import get_collection
 
+
 class SalesRepository:
     def __init__(self):
         self.collection = get_collection()

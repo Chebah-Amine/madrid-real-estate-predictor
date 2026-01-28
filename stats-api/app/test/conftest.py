@@ -9,12 +9,14 @@ import pytest
 from mongomock import MongoClient as MockMongoClient
 
 from app import create_app
-from app.command.import_csv_to_mongodb import CSVImporter  # adjust import if file moved
 
+# adjust import if file moved
+from app.command.import_csv_to_mongodb import CSVImporter
 
 # ----------------------------
 # Paths (stable in Docker/CI)
 # ----------------------------
+
 
 @pytest.fixture(scope="session")
 def fixtures_dir() -> Path:
@@ -30,6 +32,7 @@ def test_csv_file(fixtures_dir: Path) -> Path:
 # ----------------------------
 # Flask app / context (only when needed)
 # ----------------------------
+
 
 @pytest.fixture(scope="session")
 def app():
@@ -57,6 +60,7 @@ def client(app):
 # ----------------------------
 # Mock Mongo (per test)
 # ----------------------------
+
 
 @pytest.fixture()
 def mock_mongo_client():
@@ -95,6 +99,7 @@ def collection(db):
 # CSV Importer (independent)
 # ----------------------------
 
+
 @pytest.fixture()
 def csv_importer(collection):
     """
@@ -115,6 +120,7 @@ def populated_collection(csv_importer, test_csv_file: Path, collection):
 # ----------------------------
 # Optional test logging
 # ----------------------------
+
 
 @pytest.fixture(autouse=True)
 def log_test_name(request):

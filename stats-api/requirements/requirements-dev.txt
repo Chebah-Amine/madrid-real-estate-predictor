@@ -3,6 +3,5 @@ pytest-flask
 pytest-mongodb
 mongomock
 coverage
-flake8
 safety
-autopep8
+ruff

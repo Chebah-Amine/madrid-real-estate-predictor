@@ -1,6 +1,6 @@
-flask
-flask-cors
-gunicorn
-pandas # include numpy
-pymongo
+flask==3.1.2
+flask-cors==6.0.2
+gunicorn==24.1.1
+pandas==3.0.0 # include numpy
+pymongo==4.16.0
 python-dotenv

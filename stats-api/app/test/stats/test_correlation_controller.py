@@ -3,7 +3,9 @@ class TestCorrelationController:
     Functional tests for the Matrix Correlation Controller
     """
 
-    def test_get_correlation_matrix_with_success(self, app, mock_mongo_client, collection, client):
+    def test_get_correlation_matrix_with_success(
+        self, app, mock_mongo_client, collection, client
+    ):
         import pandas as pd
 
         # GIVEN
@@ -46,15 +48,16 @@ class TestCorrelationController:
             "matrix": corr.to_dict(),
         }
 
-        # WHEN 
+        # WHEN
         response = client.get("/stats/correlation/buy-price")
 
         # THEN
         assert response.status_code == 200
-        assert response.get_json() == expected_result 
+        assert response.get_json() == expected_result
 
-    
-    def test_get_matrix_correlation_error_no_document_found(self, app, mock_mongo_client, client):
+    def test_get_matrix_correlation_error_no_document_found(
+        self, app, mock_mongo_client, client
+    ):
         # GIVEN
         app.extensions["mongo_client"] = mock_mongo_client
 
@@ -66,11 +69,12 @@ class TestCorrelationController:
         assert response.get_json() == {
             "error": "no_data_found",
             "message": "No data found",
-            "details": {"request_description": "Get buy price correlation matrix"}
+            "details": {"request_description": "Get buy price correlation matrix"},
         }
-        
 
-    def test_get_matrix_correlation_error_only_rows_with_missing_values(self, app, mock_mongo_client, collection, client):
+    def test_get_matrix_correlation_error_only_rows_with_missing_values(
+        self, app, mock_mongo_client, collection, client
+    ):
         # GIVEN
         app.extensions["mongo_client"] = mock_mongo_client
 
@@ -105,18 +109,21 @@ class TestCorrelationController:
         assert response.get_json() == {
             "error": "no_data_found",
             "message": "No data found",
-            "details": {"request_description": "Get buy price correlation matrix"}
+            "details": {"request_description": "Get buy price correlation matrix"},
         }
 
-    
     def test_get_matrix_correlation_unexpected_error(self, client, monkeypatch):
         from app.controller.stats import correlation_controller
 
         # GIVEN
         def boom(self):
             raise RuntimeError("DB exploded")
-        
-        monkeypatch.setattr(correlation_controller.CorrelationService, "get_buy_price_correlation_matrix", boom)
+
+        monkeypatch.setattr(
+            correlation_controller.CorrelationService,
+            "get_buy_price_correlation_matrix",
+            boom,
+        )
 
         # WHEN
         response = client.get("/stats/correlation/buy-price")
@@ -126,8 +133,5 @@ class TestCorrelationController:
         assert response.get_json() == {
             "error": "internal_server_error",
             "message": "An unexpected error occured",
-            "details": "DB exploded"
+            "details": "DB exploded",
         }
-
-
-        

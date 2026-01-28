@@ -3,6 +3,3 @@ class TestConfig:
         assert app.testing is True
         assert app.config["MONGODB_DATABASE"].endswith("_test")
         assert app.config["MONGODB_COLLECTION"].endswith("_test")
-
-
-            

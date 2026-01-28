@@ -11,7 +11,7 @@ from pymongo.errors import PyMongoError
 
 class CSVImporter:
     """
-        Command to import data from CSV to mongo database
+    Command to import data from CSV to mongo database
     """
 
     def __init__(self, collection: Collection, logger: Optional[logging.Logger] = None):
@@ -40,13 +40,17 @@ class CSVImporter:
             docs = [
                 {k: CSVImporter.nan_to_none(v) for k, v in rec.items()}
                 for rec in records
-            ]         
+            ]
 
             self.collection.insert_many(docs)
 
             self.logger.info("Inserted %s documents from %s", len(docs), csv_file_path)
 
-        except (FileNotFoundError, pd.errors.EmptyDataError, pd.errors.ParserError) as e:
+        except (
+            FileNotFoundError,
+            pd.errors.EmptyDataError,
+            pd.errors.ParserError,
+        ) as e:
             self.logger.error("Could not import csv file %s: %s", csv_file_path, e)
             raise
 
@@ -54,7 +58,9 @@ class CSVImporter:
             self.logger.error("MongoDB insert failed: %s", e)
             raise
 
+
 # ---------- Adapter / CLI (no Flask needed) ----------
+
 
 def build_mongo_client_from_env() -> MongoClient:
     """
@@ -68,7 +74,9 @@ def build_mongo_client_from_env() -> MongoClient:
     auth_source = os.getenv("MONGODB_AUTH_SOURCE", "admin")
 
     if user and pwd:
-        return MongoClient(host=host, port=port, username=user, password=pwd, authSource=auth_source)
+        return MongoClient(
+            host=host, port=port, username=user, password=pwd, authSource=auth_source
+        )
 
     return MongoClient(host=host, port=port)
 
@@ -82,7 +90,7 @@ def get_collection_from_env(client: MongoClient) -> Collection:
 def main() -> None:
     logging.basicConfig(level=logging.INFO)
 
-    csv_path = os.getenv("CSV_PATH", "/stats/app/command/import/dataset-back.csv")
+    csv_path = os.getenv("CSV_PATH", "/stats/app/command/fixtures/dataset-back.csv")
 
     client = build_mongo_client_from_env()
     collection = get_collection_from_env(client)
