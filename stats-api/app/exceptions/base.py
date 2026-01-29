@@ -9,8 +9,8 @@ class CustomException(Exception):
         self.details = details or {}
 
     def to_dict(self):
-        return  {
+        return {
             "error": self.error_code,
             "message": self.message,
-            "details": self.details
+            "details": self.details,
         }

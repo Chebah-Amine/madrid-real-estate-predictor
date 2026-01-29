@@ -8,7 +8,7 @@ CONTAINER    := stats-container
 DB_CONTAINER := database-container
 
 # docker compose ... aim a service
-COMPOSE := docker compose --env-file .env -f $(COMPOSE_FILE)
+COMPOSE := DOCKER_BUILDKIT=1 docker compose --env-file .env -f $(COMPOSE_FILE)
 
 .PHONY: up build start stop restart logs exec down clean test lint fix-lint security-scan db-reset db-shell
 
@@ -42,17 +42,29 @@ clean:
 # docker exec ... aim a container
 test:
 	@echo "Running tests with pytest + coverage..."
-	docker exec -it $(CONTAINER) sh -lc "export PYTHONPATH=/stats:$$PYTHONPATH && \
-	coverage run -m pytest -q && coverage report -m"
+	docker exec -it $(CONTAINER) sh -lc \
+	"export PYTHONPATH=/stats:$$PYTHONPATH && \
+	coverage run -m pytest -q && \
+	coverage xml -o app/test/coverage/coverage.xml && \
+	coverage report -m"
 
 lint:
-	docker exec -it $(CONTAINER) sh -lc "flake8 /stats"
+	docker exec -it $(CONTAINER) sh -lc "ruff check /stats/app"
 
 fix-lint:
-	docker exec -it $(CONTAINER) sh -lc "autopep8 --in-place --aggressive --aggressive --recursive /stats"
+	docker exec -it $(CONTAINER) sh -lc "ruff check --fix /stats/app"
 
-security-scan:
-	docker exec -it $(CONTAINER) sh -lc "safety check --full-report"
+format:
+	docker exec -it $(CONTAINER) sh -lc "ruff format --check /stats/app"
+
+fix-format:
+	docker exec -it $(CONTAINER) sh -lc "ruff format /stats/app"
+
+safety-auth:
+	docker exec -it stats-container sh -lc "safety auth login --headless"
+
+safety-scan:
+	docker exec -it $(CONTAINER) sh -lc "safety scan --detailed"
 
 db-shell:
 	docker exec -it $(DB_CONTAINER) mongosh -u ${MONGODB_ROOT_USER} -p ${MONGODB_ROOT_PASSWORD} --authenticationDatabase admin

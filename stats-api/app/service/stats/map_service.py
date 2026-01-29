@@ -1,6 +1,7 @@
 from app.repository.stats.map_repository import MapRepository
 from app.exceptions.stats import NoDataFoundException
 
+
 class MapService:
     def __init__(self):
         self.repository = MapRepository()
@@ -10,5 +11,5 @@ class MapService:
 
         if result is None:
             raise NoDataFoundException(request_desc="Get mean price by neighborhood")
-        
+
         return result

@@ -4,6 +4,8 @@ services:
     build:
       context: ..
       dockerfile: docker/Dockerfile
+      args:
+        BUILDKIT_INLINE_CACHE: 1
     env_file:
     # import the env variable in the container, so the project could use them
     # not used to load the variables below in the docker compose file

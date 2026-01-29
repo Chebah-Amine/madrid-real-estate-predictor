@@ -4,6 +4,7 @@ from app.test.utils import dict_contains_subset
 FUNCTIONAL TEST: Test the /sales endpoint to access sales information
 """
 
+
 class TestSalesController:
     expected_response = {
         "_id": 21742,
@@ -77,21 +78,22 @@ class TestSalesController:
         assert response.get_json() == {
             "error": "sale_note_found",
             "message": "Sale not found: nonexistent_id",
-            "details": {"sale_id": "nonexistent_id"}
+            "details": {"sale_id": "nonexistent_id"},
         }
 
     def test_get_sale_error(self, client, monkeypatch):
-        # GIVEN 
+        # GIVEN
         import app.controller.sales_controller as sales_controller
 
-        # patch the instance method get_sale_by_id, so the signature should be the same
+        # patch the instance method get_sale_by_id, so the signature should be
+        # the same
         def boom(self, sale_id):
             raise RuntimeError("DB exploded")
-        
+
         # Patch the method get_mean_price_by_neighborhood
         monkeypatch.setattr(sales_controller.SalesService, "get_sale_by_id", boom)
 
-        # WHEN 
+        # WHEN
         response = client.get("/sales/not_important")
 
         # THEN
@@ -99,5 +101,5 @@ class TestSalesController:
         assert response.get_json() == {
             "error": "internal_server_error",
             "message": "An unexpected error occured",
-            "details": "DB exploded"
+            "details": "DB exploded",
         }

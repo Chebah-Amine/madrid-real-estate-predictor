@@ -1,9 +1,8 @@
 [run]
-# Folders/files to ignore during measurement
 omit =
     */test/*
     */config/*
-    */command/import/*
+    */command/fixtures/*
     */docker/*
     */requirements/*
     */__pycache__/*
